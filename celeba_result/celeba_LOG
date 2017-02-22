@@ -1,0 +1,4027 @@
+/home/hope-yao/anaconda2/bin/python /home/hope-yao/Documents/ALI-conditional/experiments/ali_celeba_conditional.py
+Using gpu device 0: TITAN X (Pascal) (CNMeM is enabled with initial size: 20.0% of memory, cuDNN 5105)
+WARNING:blocks.algorithms:GradientDescent: gradients already specified directly; cost is unused.
+WARNING:blocks.main_loop:different parameters for model and algorithm
+INFO:blocks.main_loop:Entered the main loop
+INFO:blocks.algorithms:Initializing the training algorithm
+INFO:blocks.algorithms:The training algorithm is initialized
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+-------------------------------------------------------------------------------
+BEFORE FIRST EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: True
+	 epochs_done: 0
+	 iterations_done: 0
+	 received_first_batch: False
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 0:
+	 time_initialization: 84.1329131126
+	 train_ali_compute_losses_discriminator_loss: 1.38485825062
+	 train_ali_compute_losses_generator_loss: 1.38789391518
+	 train_ali_get_predictions_data_accuracy: 0.501017212868
+	 train_ali_get_predictions_sample_accuracy: 0.499835789204
+	 valid_ali_compute_losses_discriminator_loss: 1.38637578487
+	 valid_ali_compute_losses_generator_loss: 1.38621354103
+	 valid_ali_get_predictions_data_accuracy: 0.50006121397
+	 valid_ali_get_predictions_sample_accuracy: 0.499898254871
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 0, step 1272 |####################################| Elapsed Time: 0:23:05
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 1
+	 iterations_done: 1272
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1272:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 287.61029458
+	 time_read_data_total: 287.61029458
+	 time_train_this_epoch: 1056.381459
+	 time_train_total: 1056.381459
+	 train_ali_compute_losses_discriminator_loss: 0.106810949743
+	 train_ali_compute_losses_generator_loss: 14.6155853271
+	 train_ali_get_predictions_data_accuracy: 0.967959582806
+	 train_ali_get_predictions_sample_accuracy: 0.987205207348
+	 valid_ali_compute_losses_discriminator_loss: 0.0537317618728
+	 valid_ali_compute_losses_generator_loss: 16.1938533783
+	 valid_ali_get_predictions_data_accuracy: 0.972396552563
+	 valid_ali_get_predictions_sample_accuracy: 0.991462051868
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 1, step 1272 |####################################| Elapsed Time: 0:20:21
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 2
+	 iterations_done: 2544
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2544:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 26.267480135
+	 time_read_data_total: 313.877774715
+	 time_train_this_epoch: 1152.21947145
+	 time_train_total: 2208.60093045
+	 train_ali_compute_losses_discriminator_loss: 0.468240648508
+	 train_ali_compute_losses_generator_loss: 8.82450675964
+	 train_ali_get_predictions_data_accuracy: 0.850631892681
+	 train_ali_get_predictions_sample_accuracy: 0.851864039898
+	 valid_ali_compute_losses_discriminator_loss: 0.582367479801
+	 valid_ali_compute_losses_generator_loss: 9.07116508484
+	 valid_ali_get_predictions_data_accuracy: 0.841115355492
+	 valid_ali_get_predictions_sample_accuracy: 0.861745715141
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 3
+	 iterations_done: 3816
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3816:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9590606689
+	 time_read_data_total: 336.836835384
+	 time_train_this_epoch: 1154.04605985
+	 time_train_total: 3362.6469903
+	 train_ali_compute_losses_discriminator_loss: 0.434451431036
+	 train_ali_compute_losses_generator_loss: 9.41543579102
+	 train_ali_get_predictions_data_accuracy: 0.90591442585
+	 train_ali_get_predictions_sample_accuracy: 0.863427937031
+	 valid_ali_compute_losses_discriminator_loss: 0.499485880136
+	 valid_ali_compute_losses_generator_loss: 9.43683433533
+	 valid_ali_get_predictions_data_accuracy: 0.898465156555
+	 valid_ali_get_predictions_sample_accuracy: 0.840971648693
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 2, step 1272 |####################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 4
+	 iterations_done: 5088
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 5088:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9542999268
+	 time_read_data_total: 359.791135311
+	 time_train_this_epoch: 1154.13227797
+	 time_train_total: 4516.77926826
+	 train_ali_compute_losses_discriminator_loss: 0.466448307037
+	 train_ali_compute_losses_generator_loss: 7.96813821793
+	 train_ali_get_predictions_data_accuracy: 0.861422240734
+	 train_ali_get_predictions_sample_accuracy: 0.90291005373
+	 valid_ali_compute_losses_discriminator_loss: 0.391783356667
+	 valid_ali_compute_losses_generator_loss: 7.88651800156
+	 valid_ali_get_predictions_data_accuracy: 0.862053692341
+	 valid_ali_get_predictions_sample_accuracy: 0.894783318043
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 3, step 1272 |####################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 4, step 1272 |####################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 5
+	 iterations_done: 6360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 6360:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9666790962
+	 time_read_data_total: 382.757814407
+	 time_train_this_epoch: 1153.44348669
+	 time_train_total: 5670.22275496
+	 train_ali_compute_losses_discriminator_loss: 0.583879590034
+	 train_ali_compute_losses_generator_loss: 8.00521278381
+	 train_ali_get_predictions_data_accuracy: 0.863474369049
+	 train_ali_get_predictions_sample_accuracy: 0.871647000313
+	 valid_ali_compute_losses_discriminator_loss: 0.428824990988
+	 valid_ali_compute_losses_generator_loss: 7.82242965698
+	 valid_ali_get_predictions_data_accuracy: 0.847275614738
+	 valid_ali_get_predictions_sample_accuracy: 0.870521247387
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 5, step 1272 |####################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 6
+	 iterations_done: 7632
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 7632:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9636030197
+	 time_read_data_total: 405.721417427
+	 time_train_this_epoch: 1153.19004846
+	 time_train_total: 6823.41280341
+	 train_ali_compute_losses_discriminator_loss: 0.551629424095
+	 train_ali_compute_losses_generator_loss: 7.14092731476
+	 train_ali_get_predictions_data_accuracy: 0.811757445335
+	 train_ali_get_predictions_sample_accuracy: 0.876975893974
+	 valid_ali_compute_losses_discriminator_loss: 0.511996328831
+	 valid_ali_compute_losses_generator_loss: 7.08328914642
+	 valid_ali_get_predictions_data_accuracy: 0.802434623241
+	 valid_ali_get_predictions_sample_accuracy: 0.884657025337
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 7
+	 iterations_done: 8904
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 8904:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 24.002869606
+	 time_read_data_total: 429.724287033
+	 time_train_this_epoch: 1153.06206417
+	 time_train_total: 7976.47486758
+	 train_ali_compute_losses_discriminator_loss: 0.722680270672
+	 train_ali_compute_losses_generator_loss: 5.93244314194
+	 train_ali_get_predictions_data_accuracy: 0.716444551945
+	 train_ali_get_predictions_sample_accuracy: 0.871399104595
+	 valid_ali_compute_losses_discriminator_loss: 0.774017632008
+	 valid_ali_compute_losses_generator_loss: 5.81666612625
+	 valid_ali_get_predictions_data_accuracy: 0.655320048332
+	 valid_ali_get_predictions_sample_accuracy: 0.894730269909
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 6, step 1272 |####################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 7, step 1272 |####################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 8
+	 iterations_done: 10176
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 10176:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9907815456
+	 time_read_data_total: 451.715068579
+	 time_train_this_epoch: 1153.61343741
+	 time_train_total: 9130.088305
+	 train_ali_compute_losses_discriminator_loss: 0.734110176563
+	 train_ali_compute_losses_generator_loss: 5.68616867065
+	 train_ali_get_predictions_data_accuracy: 0.746481657028
+	 train_ali_get_predictions_sample_accuracy: 0.829256892204
+	 valid_ali_compute_losses_discriminator_loss: 0.746053516865
+	 valid_ali_compute_losses_generator_loss: 5.83767461777
+	 valid_ali_get_predictions_data_accuracy: 0.724269866943
+	 valid_ali_get_predictions_sample_accuracy: 0.82711160183
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 9
+	 iterations_done: 11448
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 11448:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9685382843
+	 time_read_data_total: 473.683606863
+	 time_train_this_epoch: 1153.6971457
+	 time_train_total: 10283.7854507
+	 train_ali_compute_losses_discriminator_loss: 0.679874062538
+	 train_ali_compute_losses_generator_loss: 5.95808744431
+	 train_ali_get_predictions_data_accuracy: 0.762649893761
+	 train_ali_get_predictions_sample_accuracy: 0.804771542549
+	 valid_ali_compute_losses_discriminator_loss: 0.730965256691
+	 valid_ali_compute_losses_generator_loss: 6.3546423912
+	 valid_ali_get_predictions_data_accuracy: 0.743424296379
+	 valid_ali_get_predictions_sample_accuracy: 0.805727958679
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 8, step 1272 |####################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 10
+	 iterations_done: 12720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 12720:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9745256901
+	 time_read_data_total: 495.658132553
+	 time_train_this_epoch: 1154.33476639
+	 time_train_total: 11438.1202171
+	 train_ali_compute_losses_discriminator_loss: 0.781996846199
+	 train_ali_compute_losses_generator_loss: 5.48564386368
+	 train_ali_get_predictions_data_accuracy: 0.649569869041
+	 train_ali_get_predictions_sample_accuracy: 0.78927385807
+	 valid_ali_compute_losses_discriminator_loss: 1.02226948738
+	 valid_ali_compute_losses_generator_loss: 5.48215484619
+	 valid_ali_get_predictions_data_accuracy: 0.653903305531
+	 valid_ali_get_predictions_sample_accuracy: 0.778751790524
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 9, step 1272 |####################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 11
+	 iterations_done: 13992
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 13992:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9650127888
+	 time_read_data_total: 517.623145342
+	 time_train_this_epoch: 1153.26579046
+	 time_train_total: 12591.3860075
+	 train_ali_compute_losses_discriminator_loss: 0.699783623219
+	 train_ali_compute_losses_generator_loss: 5.91263580322
+	 train_ali_get_predictions_data_accuracy: 0.755102813244
+	 train_ali_get_predictions_sample_accuracy: 0.794325649738
+	 valid_ali_compute_losses_discriminator_loss: 0.757000565529
+	 valid_ali_compute_losses_generator_loss: 5.71015453339
+	 valid_ali_get_predictions_data_accuracy: 0.730215370655
+	 valid_ali_get_predictions_sample_accuracy: 0.7984136343
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 10, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 11, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 12
+	 iterations_done: 15264
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 15264:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.988338232
+	 time_read_data_total: 539.611483574
+	 time_train_this_epoch: 1153.73251247
+	 time_train_total: 13745.11852
+	 train_ali_compute_losses_discriminator_loss: 0.784645617008
+	 train_ali_compute_losses_generator_loss: 5.77885198593
+	 train_ali_get_predictions_data_accuracy: 0.677569270134
+	 train_ali_get_predictions_sample_accuracy: 0.798304975033
+	 valid_ali_compute_losses_discriminator_loss: 1.00311040878
+	 valid_ali_compute_losses_generator_loss: 5.92185688019
+	 valid_ali_get_predictions_data_accuracy: 0.650932133198
+	 valid_ali_get_predictions_sample_accuracy: 0.800205409527
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 13
+	 iterations_done: 16536
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 16536:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9918925762
+	 time_read_data_total: 561.60337615
+	 time_train_this_epoch: 1153.16330075
+	 time_train_total: 14898.2818208
+	 train_ali_compute_losses_discriminator_loss: 0.665800869465
+	 train_ali_compute_losses_generator_loss: 5.62441396713
+	 train_ali_get_predictions_data_accuracy: 0.749219536781
+	 train_ali_get_predictions_sample_accuracy: 0.843258082867
+	 valid_ali_compute_losses_discriminator_loss: 0.703102529049
+	 valid_ali_compute_losses_generator_loss: 5.18825626373
+	 valid_ali_get_predictions_data_accuracy: 0.688705563545
+	 valid_ali_get_predictions_sample_accuracy: 0.855250239372
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 12, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 14
+	 iterations_done: 17808
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 17808:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0144383907
+	 time_read_data_total: 583.617814541
+	 time_train_this_epoch: 1152.62630558
+	 time_train_total: 16050.9081264
+	 train_ali_compute_losses_discriminator_loss: 0.614783942699
+	 train_ali_compute_losses_generator_loss: 5.66076517105
+	 train_ali_get_predictions_data_accuracy: 0.738815665245
+	 train_ali_get_predictions_sample_accuracy: 0.820355892181
+	 valid_ali_compute_losses_discriminator_loss: 0.82871645689
+	 valid_ali_compute_losses_generator_loss: 5.33243942261
+	 valid_ali_get_predictions_data_accuracy: 0.714268088341
+	 valid_ali_get_predictions_sample_accuracy: 0.805047810078
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 13, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 14, step 1272 |###################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 15
+	 iterations_done: 19080
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 19080:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9800229073
+	 time_read_data_total: 605.597837448
+	 time_train_this_epoch: 1153.14012384
+	 time_train_total: 17204.0482502
+	 train_ali_compute_losses_discriminator_loss: 0.704717278481
+	 train_ali_compute_losses_generator_loss: 5.96176862717
+	 train_ali_get_predictions_data_accuracy: 0.746996283531
+	 train_ali_get_predictions_sample_accuracy: 0.777426838875
+	 valid_ali_compute_losses_discriminator_loss: 0.911971211433
+	 valid_ali_compute_losses_generator_loss: 5.86441516876
+	 valid_ali_get_predictions_data_accuracy: 0.695828795433
+	 valid_ali_get_predictions_sample_accuracy: 0.788730859756
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 16
+	 iterations_done: 20352
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 20352:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9674453735
+	 time_read_data_total: 627.565282822
+	 time_train_this_epoch: 1153.65509701
+	 time_train_total: 18357.7033472
+	 train_ali_compute_losses_discriminator_loss: 0.653907835484
+	 train_ali_compute_losses_generator_loss: 5.94007587433
+	 train_ali_get_predictions_data_accuracy: 0.726768195629
+	 train_ali_get_predictions_sample_accuracy: 0.795300841331
+	 valid_ali_compute_losses_discriminator_loss: 0.881857991219
+	 valid_ali_compute_losses_generator_loss: 5.67467451096
+	 valid_ali_get_predictions_data_accuracy: 0.680186986923
+	 valid_ali_get_predictions_sample_accuracy: 0.815065205097
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 15, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 16, step 1272 |###################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 17
+	 iterations_done: 21624
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 21624:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9842562675
+	 time_read_data_total: 649.549539089
+	 time_train_this_epoch: 1153.44294381
+	 time_train_total: 19511.146291
+	 train_ali_compute_losses_discriminator_loss: 0.786604523659
+	 train_ali_compute_losses_generator_loss: 5.71884393692
+	 train_ali_get_predictions_data_accuracy: 0.654632389545
+	 train_ali_get_predictions_sample_accuracy: 0.817636609077
+	 valid_ali_compute_losses_discriminator_loss: 1.07940340042
+	 valid_ali_compute_losses_generator_loss: 5.5284538269
+	 valid_ali_get_predictions_data_accuracy: 0.606163859367
+	 valid_ali_get_predictions_sample_accuracy: 0.819609761238
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 17, step 1272 |###################################| Elapsed Time: 0:20:14
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 18
+	 iterations_done: 22896
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 22896:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.3666629791
+	 time_read_data_total: 671.916202068
+	 time_train_this_epoch: 1152.24176049
+	 time_train_total: 20663.3880515
+	 train_ali_compute_losses_discriminator_loss: 0.673318207264
+	 train_ali_compute_losses_generator_loss: 6.23209762573
+	 train_ali_get_predictions_data_accuracy: 0.712590098381
+	 train_ali_get_predictions_sample_accuracy: 0.801072597504
+	 valid_ali_compute_losses_discriminator_loss: 0.924786269665
+	 valid_ali_compute_losses_generator_loss: 6.0742020607
+	 valid_ali_get_predictions_data_accuracy: 0.667808413506
+	 valid_ali_get_predictions_sample_accuracy: 0.802470207214
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 19
+	 iterations_done: 24168
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 24168:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 23.0609760284
+	 time_read_data_total: 694.977178097
+	 time_train_this_epoch: 1152.93792772
+	 time_train_total: 21816.3259792
+	 train_ali_compute_losses_discriminator_loss: 0.735455453396
+	 train_ali_compute_losses_generator_loss: 5.84123277664
+	 train_ali_get_predictions_data_accuracy: 0.708955287933
+	 train_ali_get_predictions_sample_accuracy: 0.754233181477
+	 valid_ali_compute_losses_discriminator_loss: 1.15014469624
+	 valid_ali_compute_losses_generator_loss: 5.8626871109
+	 valid_ali_get_predictions_data_accuracy: 0.660108864307
+	 valid_ali_get_predictions_sample_accuracy: 0.742467522621
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 18, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 20
+	 iterations_done: 25440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 25440:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9357481003
+	 time_read_data_total: 716.912926197
+	 time_train_this_epoch: 1152.55192351
+	 time_train_total: 22968.8779027
+	 train_ali_compute_losses_discriminator_loss: 0.665717482567
+	 train_ali_compute_losses_generator_loss: 6.45594406128
+	 train_ali_get_predictions_data_accuracy: 0.686112642288
+	 train_ali_get_predictions_sample_accuracy: 0.774643301964
+	 valid_ali_compute_losses_discriminator_loss: 1.21595311165
+	 valid_ali_compute_losses_generator_loss: 5.79586076736
+	 valid_ali_get_predictions_data_accuracy: 0.666290581226
+	 valid_ali_get_predictions_sample_accuracy: 0.744010269642
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 19, step 1272 |###################################| Elapsed Time: 0:20:14
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 21
+	 iterations_done: 26712
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 26712:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 23.0478127003
+	 time_read_data_total: 739.960738897
+	 time_train_this_epoch: 1152.72500062
+	 time_train_total: 24121.6029034
+	 train_ali_compute_losses_discriminator_loss: 0.739328205585
+	 train_ali_compute_losses_generator_loss: 5.85805940628
+	 train_ali_get_predictions_data_accuracy: 0.700401961803
+	 train_ali_get_predictions_sample_accuracy: 0.820414364338
+	 valid_ali_compute_losses_discriminator_loss: 0.970211863518
+	 valid_ali_compute_losses_generator_loss: 5.27684307098
+	 valid_ali_get_predictions_data_accuracy: 0.618919193745
+	 valid_ali_get_predictions_sample_accuracy: 0.833402812481
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 20, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 21, step 1272 |###################################| Elapsed Time: 0:20:14
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 22
+	 iterations_done: 27984
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 27984:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9734978676
+	 time_read_data_total: 761.934236765
+	 time_train_this_epoch: 1152.05499315
+	 time_train_total: 25273.6578965
+	 train_ali_compute_losses_discriminator_loss: 0.732976078987
+	 train_ali_compute_losses_generator_loss: 5.85412502289
+	 train_ali_get_predictions_data_accuracy: 0.722829639912
+	 train_ali_get_predictions_sample_accuracy: 0.768540203571
+	 valid_ali_compute_losses_discriminator_loss: 0.981975734234
+	 valid_ali_compute_losses_generator_loss: 5.10693788528
+	 valid_ali_get_predictions_data_accuracy: 0.667189955711
+	 valid_ali_get_predictions_sample_accuracy: 0.774179816246
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 22, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 23
+	 iterations_done: 29256
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 29256:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.26841259
+	 time_read_data_total: 784.202649355
+	 time_train_this_epoch: 1153.63580298
+	 time_train_total: 26427.2936995
+	 train_ali_compute_losses_discriminator_loss: 0.673436701298
+	 train_ali_compute_losses_generator_loss: 5.98412227631
+	 train_ali_get_predictions_data_accuracy: 0.703507721424
+	 train_ali_get_predictions_sample_accuracy: 0.807553887367
+	 valid_ali_compute_losses_discriminator_loss: 0.968432247639
+	 valid_ali_compute_losses_generator_loss: 5.43575191498
+	 valid_ali_get_predictions_data_accuracy: 0.639843463898
+	 valid_ali_get_predictions_sample_accuracy: 0.812953352928
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 23, step 1272 |###################################| Elapsed Time: 0:20:16
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 24
+	 iterations_done: 30528
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 30528:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 23.6670427322
+	 time_read_data_total: 807.869692087
+	 time_train_this_epoch: 1154.83144426
+	 time_train_total: 27582.1251438
+	 train_ali_compute_losses_discriminator_loss: 0.680209636688
+	 train_ali_compute_losses_generator_loss: 6.18093395233
+	 train_ali_get_predictions_data_accuracy: 0.689581513405
+	 train_ali_get_predictions_sample_accuracy: 0.822033524513
+	 valid_ali_compute_losses_discriminator_loss: 0.989315032959
+	 valid_ali_compute_losses_generator_loss: 5.51923274994
+	 valid_ali_get_predictions_data_accuracy: 0.6255017519
+	 valid_ali_get_predictions_sample_accuracy: 0.820932745934
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 25
+	 iterations_done: 31800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 31800:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.6312437057
+	 time_read_data_total: 830.500935793
+	 time_train_this_epoch: 1155.42802095
+	 time_train_total: 28737.5531647
+	 train_ali_compute_losses_discriminator_loss: 0.681896090508
+	 train_ali_compute_losses_generator_loss: 6.17481517792
+	 train_ali_get_predictions_data_accuracy: 0.71364814043
+	 train_ali_get_predictions_sample_accuracy: 0.805589199066
+	 valid_ali_compute_losses_discriminator_loss: 0.996115863323
+	 valid_ali_compute_losses_generator_loss: 5.54209566116
+	 valid_ali_get_predictions_data_accuracy: 0.649435281754
+	 valid_ali_get_predictions_sample_accuracy: 0.794964432716
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 24, step 1272 |###################################| Elapsed Time: 0:20:20
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 25, step 1272 |###################################| Elapsed Time: 0:20:19
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 26
+	 iterations_done: 33072
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 33072:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.3997268677
+	 time_read_data_total: 852.900662661
+	 time_train_this_epoch: 1155.73554802
+	 time_train_total: 29893.2887127
+	 train_ali_compute_losses_discriminator_loss: 0.726307809353
+	 train_ali_compute_losses_generator_loss: 5.76602077484
+	 train_ali_get_predictions_data_accuracy: 0.678449273109
+	 train_ali_get_predictions_sample_accuracy: 0.811385512352
+	 valid_ali_compute_losses_discriminator_loss: 1.03000259399
+	 valid_ali_compute_losses_generator_loss: 5.10662746429
+	 valid_ali_get_predictions_data_accuracy: 0.606741070747
+	 valid_ali_get_predictions_sample_accuracy: 0.80798214674
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 26, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 27
+	 iterations_done: 34344
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 34344:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9922528267
+	 time_read_data_total: 874.892915487
+	 time_train_this_epoch: 1155.19322467
+	 time_train_total: 31048.4819374
+	 train_ali_compute_losses_discriminator_loss: 0.684051036835
+	 train_ali_compute_losses_generator_loss: 6.22280406952
+	 train_ali_get_predictions_data_accuracy: 0.688865959644
+	 train_ali_get_predictions_sample_accuracy: 0.807626366615
+	 valid_ali_compute_losses_discriminator_loss: 1.07687485218
+	 valid_ali_compute_losses_generator_loss: 5.59521150589
+	 valid_ali_get_predictions_data_accuracy: 0.621928215027
+	 valid_ali_get_predictions_sample_accuracy: 0.794601142406
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 28
+	 iterations_done: 35616
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 35616:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.1551194191
+	 time_read_data_total: 897.048034906
+	 time_train_this_epoch: 1155.8251977
+	 time_train_total: 32204.3071351
+	 train_ali_compute_losses_discriminator_loss: 0.686744093895
+	 train_ali_compute_losses_generator_loss: 6.31383275986
+	 train_ali_get_predictions_data_accuracy: 0.68716275692
+	 train_ali_get_predictions_sample_accuracy: 0.8026252985
+	 valid_ali_compute_losses_discriminator_loss: 1.01502466202
+	 valid_ali_compute_losses_generator_loss: 5.86699199677
+	 valid_ali_get_predictions_data_accuracy: 0.624803483486
+	 valid_ali_get_predictions_sample_accuracy: 0.800494790077
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 27, step 1272 |###################################| Elapsed Time: 0:20:20
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 29
+	 iterations_done: 36888
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 36888:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.7354331017
+	 time_read_data_total: 919.783468008
+	 time_train_this_epoch: 1162.74961162
+	 time_train_total: 33367.0567467
+	 train_ali_compute_losses_discriminator_loss: 0.679017901421
+	 train_ali_compute_losses_generator_loss: 6.4745850563
+	 train_ali_get_predictions_data_accuracy: 0.692326962948
+	 train_ali_get_predictions_sample_accuracy: 0.826387286186
+	 valid_ali_compute_losses_discriminator_loss: 1.05239498615
+	 valid_ali_compute_losses_generator_loss: 5.84926271439
+	 valid_ali_get_predictions_data_accuracy: 0.599549651146
+	 valid_ali_get_predictions_sample_accuracy: 0.826559185982
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 28, step 1272 |###################################| Elapsed Time: 0:20:28
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 38160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 38160:
+	 saved_to: ('ali_conditional_celeba.tar',)
+INFO:blocks.extensions.saveload:Checkpointing has finished
+	 time_read_data_this_epoch: 23.0953056812
+Epoch 29, step 1272 |###################################| Elapsed Time: 0:21:22
+	 time_read_data_total: 942.878773689
+	 time_train_this_epoch: 1214.05390906
+	 time_train_total: 34581.1106558
+	 train_ali_compute_losses_discriminator_loss: 0.731745302677
+	 train_ali_compute_losses_generator_loss: 6.23734378815
+	 train_ali_get_predictions_data_accuracy: 0.671022772789
+	 train_ali_get_predictions_sample_accuracy: 0.809668183327
+	 valid_ali_compute_losses_discriminator_loss: 1.19595456123
+	 valid_ali_compute_losses_generator_loss: 6.00029420853
+	 valid_ali_get_predictions_data_accuracy: 0.590056598186
+	 valid_ali_get_predictions_sample_accuracy: 0.800714671612
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 30, step 1272 |###################################| Elapsed Time: 0:21:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 31
+	 iterations_done: 39432
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 39432:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.8924992085
+	 time_read_data_total: 965.771272898
+	 time_train_this_epoch: 1213.87431026
+	 time_train_total: 35794.984966
+	 train_ali_compute_losses_discriminator_loss: 0.728080809116
+	 train_ali_compute_losses_generator_loss: 6.40536022186
+	 train_ali_get_predictions_data_accuracy: 0.678133249283
+	 train_ali_get_predictions_sample_accuracy: 0.794218301773
+	 valid_ali_compute_losses_discriminator_loss: 1.12926220894
+	 valid_ali_compute_losses_generator_loss: 5.37649059296
+	 valid_ali_get_predictions_data_accuracy: 0.6076182127
+	 valid_ali_get_predictions_sample_accuracy: 0.787982940674
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 32
+	 iterations_done: 40704
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40704:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9150707722
+	 time_read_data_total: 988.68634367
+	 time_train_this_epoch: 1213.74505663
+	 time_train_total: 37008.7300227
+	 train_ali_compute_losses_discriminator_loss: 0.69773465395
+	 train_ali_compute_losses_generator_loss: 6.37361431122
+	 train_ali_get_predictions_data_accuracy: 0.696533799171
+	 train_ali_get_predictions_sample_accuracy: 0.823748588562
+	 valid_ali_compute_losses_discriminator_loss: 1.0398645401
+	 valid_ali_compute_losses_generator_loss: 5.6517457962
+	 valid_ali_get_predictions_data_accuracy: 0.597256064415
+	 valid_ali_get_predictions_sample_accuracy: 0.827844619751
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 31, step 1272 |###################################| Elapsed Time: 0:21:18
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 32, step 1272 |###################################| Elapsed Time: 0:21:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 33
+	 iterations_done: 41976
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 41976:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 23.5780949593
+	 time_read_data_total: 1012.26443863
+	 time_train_this_epoch: 1217.89012122
+	 time_train_total: 38226.6201439
+	 train_ali_compute_losses_discriminator_loss: 0.693182229996
+	 train_ali_compute_losses_generator_loss: 6.4962143898
+	 train_ali_get_predictions_data_accuracy: 0.708238363266
+	 train_ali_get_predictions_sample_accuracy: 0.823974967003
+	 valid_ali_compute_losses_discriminator_loss: 0.967142224312
+	 valid_ali_compute_losses_generator_loss: 5.45406532288
+	 valid_ali_get_predictions_data_accuracy: 0.59961181879
+	 valid_ali_get_predictions_sample_accuracy: 0.840688407421
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 34
+	 iterations_done: 43248
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 43248:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0506134033
+	 time_read_data_total: 1034.31505203
+	 time_train_this_epoch: 1220.87164068
+	 time_train_total: 39447.4917846
+	 train_ali_compute_losses_discriminator_loss: 0.697470724583
+	 train_ali_compute_losses_generator_loss: 6.18004274368
+	 train_ali_get_predictions_data_accuracy: 0.659154295921
+	 train_ali_get_predictions_sample_accuracy: 0.806058049202
+	 valid_ali_compute_losses_discriminator_loss: 1.14496040344
+	 valid_ali_compute_losses_generator_loss: 5.57505321503
+	 valid_ali_get_predictions_data_accuracy: 0.584014415741
+	 valid_ali_get_predictions_sample_accuracy: 0.798118174076
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 33, step 1272 |###################################| Elapsed Time: 0:21:23
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 35
+	 iterations_done: 44520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 44520:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0919620991
+	 time_read_data_total: 1056.40701413
+	 time_train_this_epoch: 1220.492203
+	 time_train_total: 40667.9839876
+	 train_ali_compute_losses_discriminator_loss: 0.662207245827
+	 train_ali_compute_losses_generator_loss: 6.42966461182
+	 train_ali_get_predictions_data_accuracy: 0.686757028103
+	 train_ali_get_predictions_sample_accuracy: 0.808512091637
+	 valid_ali_compute_losses_discriminator_loss: 1.09026610851
+	 valid_ali_compute_losses_generator_loss: 5.64520740509
+	 valid_ali_get_predictions_data_accuracy: 0.579783797264
+	 valid_ali_get_predictions_sample_accuracy: 0.823537349701
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 34, step 1272 |###################################| Elapsed Time: 0:21:27
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 35, step 1272 |###################################| Elapsed Time: 0:21:04
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 36
+	 iterations_done: 45792
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 45792:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0228874683
+	 time_read_data_total: 1078.4299016
+	 time_train_this_epoch: 1201.81523895
+	 time_train_total: 41869.7992265
+	 train_ali_compute_losses_discriminator_loss: 0.664886236191
+	 train_ali_compute_losses_generator_loss: 6.54930877686
+	 train_ali_get_predictions_data_accuracy: 0.697354376316
+	 train_ali_get_predictions_sample_accuracy: 0.824044704437
+	 valid_ali_compute_losses_discriminator_loss: 1.08540785313
+	 valid_ali_compute_losses_generator_loss: 5.64810419083
+	 valid_ali_get_predictions_data_accuracy: 0.584027767181
+	 valid_ali_get_predictions_sample_accuracy: 0.828329920769
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 36, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 37
+	 iterations_done: 47064
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 47064:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0640487671
+	 time_read_data_total: 1100.49395037
+	 time_train_this_epoch: 1154.22465611
+	 time_train_total: 43024.0238826
+	 train_ali_compute_losses_discriminator_loss: 0.670503854752
+	 train_ali_compute_losses_generator_loss: 6.16065120697
+	 train_ali_get_predictions_data_accuracy: 0.717493414879
+	 train_ali_get_predictions_sample_accuracy: 0.845895946026
+	 valid_ali_compute_losses_discriminator_loss: 0.964737713337
+	 valid_ali_compute_losses_generator_loss: 5.72561073303
+	 valid_ali_get_predictions_data_accuracy: 0.600080311298
+	 valid_ali_get_predictions_sample_accuracy: 0.853083133698
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 37, step 1272 |###################################| Elapsed Time: 0:20:16
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 38
+	 iterations_done: 48336
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 48336:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0244903564
+	 time_read_data_total: 1122.51844072
+	 time_train_this_epoch: 1153.49595308
+	 time_train_total: 44177.5198357
+	 train_ali_compute_losses_discriminator_loss: 0.681278288364
+	 train_ali_compute_losses_generator_loss: 6.67452859879
+	 train_ali_get_predictions_data_accuracy: 0.702809214592
+	 train_ali_get_predictions_sample_accuracy: 0.819260716438
+	 valid_ali_compute_losses_discriminator_loss: 1.07392287254
+	 valid_ali_compute_losses_generator_loss: 5.82284498215
+	 valid_ali_get_predictions_data_accuracy: 0.594368994236
+	 valid_ali_get_predictions_sample_accuracy: 0.82219773531
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 38, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 39
+	 iterations_done: 49608
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 49608:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0209076405
+	 time_read_data_total: 1144.53934836
+	 time_train_this_epoch: 1153.68939543
+	 time_train_total: 45331.2092311
+	 train_ali_compute_losses_discriminator_loss: 0.699497818947
+	 train_ali_compute_losses_generator_loss: 6.06162691116
+	 train_ali_get_predictions_data_accuracy: 0.653161525726
+	 train_ali_get_predictions_sample_accuracy: 0.864294707775
+	 valid_ali_compute_losses_discriminator_loss: 1.16151082516
+	 valid_ali_compute_losses_generator_loss: 5.85080957413
+	 valid_ali_get_predictions_data_accuracy: 0.506369233131
+	 valid_ali_get_predictions_sample_accuracy: 0.881918430328
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 39, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 40
+	 iterations_done: 50880
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 50880:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.1147527695
+	 time_read_data_total: 1166.65410113
+	 time_train_this_epoch: 1155.84349346
+	 time_train_total: 46487.0527246
+	 train_ali_compute_losses_discriminator_loss: 0.674329698086
+	 train_ali_compute_losses_generator_loss: 6.00033473969
+	 train_ali_get_predictions_data_accuracy: 0.745796263218
+	 train_ali_get_predictions_sample_accuracy: 0.828463196754
+	 valid_ali_compute_losses_discriminator_loss: 0.896476089954
+	 valid_ali_compute_losses_generator_loss: 5.07458591461
+	 valid_ali_get_predictions_data_accuracy: 0.629441618919
+	 valid_ali_get_predictions_sample_accuracy: 0.828529238701
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 40, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 41
+	 iterations_done: 52152
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 52152:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9544146061
+	 time_read_data_total: 1188.60851574
+	 time_train_this_epoch: 1154.63900495
+	 time_train_total: 47641.6917295
+	 train_ali_compute_losses_discriminator_loss: 0.753159880638
+	 train_ali_compute_losses_generator_loss: 6.19432783127
+	 train_ali_get_predictions_data_accuracy: 0.665233075619
+	 train_ali_get_predictions_sample_accuracy: 0.820691466331
+	 valid_ali_compute_losses_discriminator_loss: 1.14723300934
+	 valid_ali_compute_losses_generator_loss: 6.07155895233
+	 valid_ali_get_predictions_data_accuracy: 0.567599415779
+	 valid_ali_get_predictions_sample_accuracy: 0.822848916054
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 41, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 42
+	 iterations_done: 53424
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 53424:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0395331383
+	 time_read_data_total: 1210.64804888
+	 time_train_this_epoch: 1155.25414562
+	 time_train_total: 48796.9458752
+	 train_ali_compute_losses_discriminator_loss: 0.709498822689
+	 train_ali_compute_losses_generator_loss: 6.75192928314
+	 train_ali_get_predictions_data_accuracy: 0.692855477333
+	 train_ali_get_predictions_sample_accuracy: 0.795718431473
+	 valid_ali_compute_losses_discriminator_loss: 1.12256622314
+	 valid_ali_compute_losses_generator_loss: 5.31326150894
+	 valid_ali_get_predictions_data_accuracy: 0.595382869244
+	 valid_ali_get_predictions_sample_accuracy: 0.791679501534
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 43
+	 iterations_done: 54696
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 54696:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0914955139
+	 time_read_data_total: 1232.73954439
+	 time_train_this_epoch: 1154.07534027
+	 time_train_total: 49951.0212154
+	 train_ali_compute_losses_discriminator_loss: 0.671267926693
+	 train_ali_compute_losses_generator_loss: 6.31825399399
+	 train_ali_get_predictions_data_accuracy: 0.684133887291
+	 train_ali_get_predictions_sample_accuracy: 0.840043187141
+	 valid_ali_compute_losses_discriminator_loss: 1.08956491947
+	 valid_ali_compute_losses_generator_loss: 5.38983058929
+	 valid_ali_get_predictions_data_accuracy: 0.558905005455
+	 valid_ali_get_predictions_sample_accuracy: 0.841087162495
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 42, step 1272 |###################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 43, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 44
+	 iterations_done: 55968
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 55968:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.057851553
+	 time_read_data_total: 1254.79739594
+	 time_train_this_epoch: 1155.06160927
+	 time_train_total: 51106.0828247
+	 train_ali_compute_losses_discriminator_loss: 0.748871684074
+	 train_ali_compute_losses_generator_loss: 6.32324504852
+	 train_ali_get_predictions_data_accuracy: 0.681380152702
+	 train_ali_get_predictions_sample_accuracy: 0.811600863934
+	 valid_ali_compute_losses_discriminator_loss: 1.1733982563
+	 valid_ali_compute_losses_generator_loss: 5.50581455231
+	 valid_ali_get_predictions_data_accuracy: 0.552523732185
+	 valid_ali_get_predictions_sample_accuracy: 0.818873107433
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 44, step 1272 |###################################| Elapsed Time: 0:20:20
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 45
+	 iterations_done: 57240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 57240:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0849690437
+	 time_read_data_total: 1276.88236499
+	 time_train_this_epoch: 1155.60386491
+	 time_train_total: 52261.6866896
+	 train_ali_compute_losses_discriminator_loss: 0.638580799103
+	 train_ali_compute_losses_generator_loss: 6.70261383057
+	 train_ali_get_predictions_data_accuracy: 0.726913034916
+	 train_ali_get_predictions_sample_accuracy: 0.846426129341
+	 valid_ali_compute_losses_discriminator_loss: 0.961808025837
+	 valid_ali_compute_losses_generator_loss: 6.01118803024
+	 valid_ali_get_predictions_data_accuracy: 0.579288601875
+	 valid_ali_get_predictions_sample_accuracy: 0.862736701965
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 46
+	 iterations_done: 58512
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 58512:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9123589993
+	 time_read_data_total: 1298.79472399
+	 time_train_this_epoch: 1155.0618782
+	 time_train_total: 53416.7485678
+	 train_ali_compute_losses_discriminator_loss: 0.680214107037
+	 train_ali_compute_losses_generator_loss: 6.58644199371
+	 train_ali_get_predictions_data_accuracy: 0.738606572151
+	 train_ali_get_predictions_sample_accuracy: 0.837980747223
+	 valid_ali_compute_losses_discriminator_loss: 0.992037892342
+	 valid_ali_compute_losses_generator_loss: 5.7309885025
+	 valid_ali_get_predictions_data_accuracy: 0.587571322918
+	 valid_ali_get_predictions_sample_accuracy: 0.852929234505
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 45, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 46, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 47
+	 iterations_done: 59784
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 59784:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0287687778
+	 time_read_data_total: 1320.82349277
+	 time_train_this_epoch: 1154.75256538
+	 time_train_total: 54571.5011332
+	 train_ali_compute_losses_discriminator_loss: 0.691144108772
+	 train_ali_compute_losses_generator_loss: 5.73465919495
+	 train_ali_get_predictions_data_accuracy: 0.646129727364
+	 train_ali_get_predictions_sample_accuracy: 0.830657839775
+	 valid_ali_compute_losses_discriminator_loss: 1.26613461971
+	 valid_ali_compute_losses_generator_loss: 5.04007005692
+	 valid_ali_get_predictions_data_accuracy: 0.517758309841
+	 valid_ali_get_predictions_sample_accuracy: 0.83441388607
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 47, step 1272 |###################################| Elapsed Time: 0:20:17
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 48
+	 iterations_done: 61056
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 61056:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0337870121
+	 time_read_data_total: 1342.85727978
+	 time_train_this_epoch: 1154.13741255
+	 time_train_total: 55725.6385458
+	 train_ali_compute_losses_discriminator_loss: 0.714201509953
+	 train_ali_compute_losses_generator_loss: 6.05838537216
+	 train_ali_get_predictions_data_accuracy: 0.694839417934
+	 train_ali_get_predictions_sample_accuracy: 0.840669512749
+	 valid_ali_compute_losses_discriminator_loss: 1.08844125271
+	 valid_ali_compute_losses_generator_loss: 5.300801754
+	 valid_ali_get_predictions_data_accuracy: 0.566346526146
+	 valid_ali_get_predictions_sample_accuracy: 0.855315864086
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 49
+	 iterations_done: 62328
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 62328:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0141847134
+	 time_read_data_total: 1364.87146449
+	 time_train_this_epoch: 1155.48559713
+	 time_train_total: 56881.1241429
+	 train_ali_compute_losses_discriminator_loss: 0.691748380661
+	 train_ali_compute_losses_generator_loss: 6.18825292587
+	 train_ali_get_predictions_data_accuracy: 0.671876490116
+	 train_ali_get_predictions_sample_accuracy: 0.832135081291
+	 valid_ali_compute_losses_discriminator_loss: 1.15051722527
+	 valid_ali_compute_losses_generator_loss: 5.48292398453
+	 valid_ali_get_predictions_data_accuracy: 0.53438103199
+	 valid_ali_get_predictions_sample_accuracy: 0.853655338287
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 48, step 1272 |###################################| Elapsed Time: 0:20:18
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 50
+	 iterations_done: 63600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 63600:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0789117813
+	 time_read_data_total: 1386.95037627
+	 time_train_this_epoch: 1155.48633552
+	 time_train_total: 58036.6104784
+	 train_ali_compute_losses_discriminator_loss: 0.688097298145
+	 train_ali_compute_losses_generator_loss: 6.1804189682
+	 train_ali_get_predictions_data_accuracy: 0.695381999016
+	 train_ali_get_predictions_sample_accuracy: 0.846912562847
+	 valid_ali_compute_losses_discriminator_loss: 1.10251140594
+	 valid_ali_compute_losses_generator_loss: 5.37204647064
+	 valid_ali_get_predictions_data_accuracy: 0.568245053291
+	 valid_ali_get_predictions_sample_accuracy: 0.834719836712
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 49, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 50, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 51
+	 iterations_done: 64872
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 64872:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0890448093
+	 time_read_data_total: 1409.03942108
+	 time_train_this_epoch: 1154.33897758
+	 time_train_total: 59190.949456
+	 train_ali_compute_losses_discriminator_loss: 0.693312287331
+	 train_ali_compute_losses_generator_loss: 6.03062725067
+	 train_ali_get_predictions_data_accuracy: 0.745948910713
+	 train_ali_get_predictions_sample_accuracy: 0.820461750031
+	 valid_ali_compute_losses_discriminator_loss: 1.01854681969
+	 valid_ali_compute_losses_generator_loss: 5.27298545837
+	 valid_ali_get_predictions_data_accuracy: 0.600801706314
+	 valid_ali_get_predictions_sample_accuracy: 0.823161244392
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 51, step 1272 |###################################| Elapsed Time: 0:20:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 52
+	 iterations_done: 66144
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 66144:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0641291142
+	 time_read_data_total: 1431.1035502
+	 time_train_this_epoch: 1154.10772252
+	 time_train_total: 60345.0571785
+	 train_ali_compute_losses_discriminator_loss: 0.655122458935
+	 train_ali_compute_losses_generator_loss: 6.28431081772
+	 train_ali_get_predictions_data_accuracy: 0.681280791759
+	 train_ali_get_predictions_sample_accuracy: 0.853983700275
+	 valid_ali_compute_losses_discriminator_loss: 1.1366121769
+	 valid_ali_compute_losses_generator_loss: 5.97850608826
+	 valid_ali_get_predictions_data_accuracy: 0.545489907265
+	 valid_ali_get_predictions_sample_accuracy: 0.867831408978
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 53
+	 iterations_done: 67416
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 67416:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0464439392
+	 time_read_data_total: 1453.14999413
+	 time_train_this_epoch: 1154.7921772
+	 time_train_total: 61499.8493557
+	 train_ali_compute_losses_discriminator_loss: 0.695919156075
+	 train_ali_compute_losses_generator_loss: 6.04182100296
+	 train_ali_get_predictions_data_accuracy: 0.689395070076
+	 train_ali_get_predictions_sample_accuracy: 0.847474098206
+	 valid_ali_compute_losses_discriminator_loss: 1.19822239876
+	 valid_ali_compute_losses_generator_loss: 5.62816905975
+	 valid_ali_get_predictions_data_accuracy: 0.524512290955
+	 valid_ali_get_predictions_sample_accuracy: 0.868196666241
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 52, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 53, step 1272 |###################################| Elapsed Time: 0:20:07
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 54
+	 iterations_done: 68688
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 68688:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.054598093
+	 time_read_data_total: 1475.20459223
+	 time_train_this_epoch: 1144.37743902
+	 time_train_total: 62644.2267947
+	 train_ali_compute_losses_discriminator_loss: 0.715056538582
+	 train_ali_compute_losses_generator_loss: 6.20816278458
+	 train_ali_get_predictions_data_accuracy: 0.704695224762
+	 train_ali_get_predictions_sample_accuracy: 0.80528908968
+	 valid_ali_compute_losses_discriminator_loss: 1.19011831284
+	 valid_ali_compute_losses_generator_loss: 5.51540327072
+	 valid_ali_get_predictions_data_accuracy: 0.586691319942
+	 valid_ali_get_predictions_sample_accuracy: 0.794249176979
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 54, step 1272 |###################################| Elapsed Time: 0:19:37
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 55
+	 iterations_done: 69960
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 69960:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0234000683
+	 time_read_data_total: 1497.2279923
+	 time_train_this_epoch: 1114.74334431
+	 time_train_total: 63758.970139
+	 train_ali_compute_losses_discriminator_loss: 0.70383054018
+	 train_ali_compute_losses_generator_loss: 6.50804901123
+	 train_ali_get_predictions_data_accuracy: 0.746394336224
+	 train_ali_get_predictions_sample_accuracy: 0.832680583
+	 valid_ali_compute_losses_discriminator_loss: 1.0347366333
+	 valid_ali_compute_losses_generator_loss: 5.70579624176
+	 valid_ali_get_predictions_data_accuracy: 0.594560980797
+	 valid_ali_get_predictions_sample_accuracy: 0.83564722538
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 56
+	 iterations_done: 71232
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 71232:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0680980682
+	 time_read_data_total: 1519.29609036
+	 time_train_this_epoch: 1114.69052291
+	 time_train_total: 64873.6606619
+	 train_ali_compute_losses_discriminator_loss: 0.665079772472
+	 train_ali_compute_losses_generator_loss: 6.42895650864
+	 train_ali_get_predictions_data_accuracy: 0.694699764252
+	 train_ali_get_predictions_sample_accuracy: 0.848885178566
+	 valid_ali_compute_losses_discriminator_loss: 1.15605175495
+	 valid_ali_compute_losses_generator_loss: 5.7156662941
+	 valid_ali_get_predictions_data_accuracy: 0.53610932827
+	 valid_ali_get_predictions_sample_accuracy: 0.863488674164
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 55, step 1272 |###################################| Elapsed Time: 0:19:36
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 57
+	 iterations_done: 72504
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 72504:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0193572044
+	 time_read_data_total: 1541.31544757
+	 time_train_this_epoch: 1114.39856863
+	 time_train_total: 65988.0592306
+	 train_ali_compute_losses_discriminator_loss: 0.663861215115
+	 train_ali_compute_losses_generator_loss: 6.32979059219
+	 train_ali_get_predictions_data_accuracy: 0.727693498135
+	 train_ali_get_predictions_sample_accuracy: 0.853424072266
+	 valid_ali_compute_losses_discriminator_loss: 1.12573051453
+	 valid_ali_compute_losses_generator_loss: 5.40777444839
+	 valid_ali_get_predictions_data_accuracy: 0.560929596424
+	 valid_ali_get_predictions_sample_accuracy: 0.853017449379
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 56, step 1272 |###################################| Elapsed Time: 0:19:40
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 57, step 1272 |###################################| Elapsed Time: 0:19:57
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 58
+	 iterations_done: 73776
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 73776:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.086199522
+	 time_read_data_total: 1563.40164709
+	 time_train_this_epoch: 1134.01976871
+	 time_train_total: 67122.0789993
+	 train_ali_compute_losses_discriminator_loss: 0.702865660191
+	 train_ali_compute_losses_generator_loss: 6.21847629547
+	 train_ali_get_predictions_data_accuracy: 0.713641285896
+	 train_ali_get_predictions_sample_accuracy: 0.832249939442
+	 valid_ali_compute_losses_discriminator_loss: 1.16726112366
+	 valid_ali_compute_losses_generator_loss: 5.59932994843
+	 valid_ali_get_predictions_data_accuracy: 0.542165279388
+	 valid_ali_get_predictions_sample_accuracy: 0.847506701946
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 59
+	 iterations_done: 75048
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 75048:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0249655247
+	 time_read_data_total: 1585.42661262
+	 time_train_this_epoch: 1152.71002865
+	 time_train_total: 68274.7890279
+	 train_ali_compute_losses_discriminator_loss: 0.653964519501
+	 train_ali_compute_losses_generator_loss: 6.59960794449
+	 train_ali_get_predictions_data_accuracy: 0.698164284229
+	 train_ali_get_predictions_sample_accuracy: 0.842407405376
+	 valid_ali_compute_losses_discriminator_loss: 1.17179489136
+	 valid_ali_compute_losses_generator_loss: 5.57341337204
+	 valid_ali_get_predictions_data_accuracy: 0.549658715725
+	 valid_ali_get_predictions_sample_accuracy: 0.846788883209
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 58, step 1272 |###################################| Elapsed Time: 0:20:14
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 60
+	 iterations_done: 76320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 76320:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0867390633
+	 time_read_data_total: 1607.51335168
+	 time_train_this_epoch: 1153.20281243
+	 time_train_total: 69427.9918404
+	 train_ali_compute_losses_discriminator_loss: 0.690922915936
+	 train_ali_compute_losses_generator_loss: 6.28249454498
+	 train_ali_get_predictions_data_accuracy: 0.709279179573
+	 train_ali_get_predictions_sample_accuracy: 0.855767726898
+	 valid_ali_compute_losses_discriminator_loss: 1.11522591114
+	 valid_ali_compute_losses_generator_loss: 5.36792087555
+	 valid_ali_get_predictions_data_accuracy: 0.561899662018
+	 valid_ali_get_predictions_sample_accuracy: 0.848959326744
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 59, step 1272 |###################################| Elapsed Time: 0:20:18
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 61
+	 iterations_done: 77592
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 77592:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0054764748
+	 time_read_data_total: 1629.51882815
+	 time_train_this_epoch: 1153.2428472
+	 time_train_total: 70581.2346876
+	 train_ali_compute_losses_discriminator_loss: 0.686754584312
+	 train_ali_compute_losses_generator_loss: 6.16952371597
+	 train_ali_get_predictions_data_accuracy: 0.696458935738
+	 train_ali_get_predictions_sample_accuracy: 0.847702503204
+	 valid_ali_compute_losses_discriminator_loss: 1.24292397499
+	 valid_ali_compute_losses_generator_loss: 5.87391614914
+	 valid_ali_get_predictions_data_accuracy: 0.538428962231
+	 valid_ali_get_predictions_sample_accuracy: 0.842266738415
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 60, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 61, step 1272 |###################################| Elapsed Time: 0:20:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 62
+	 iterations_done: 78864
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 78864:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0652723312
+	 time_read_data_total: 1651.58410048
+	 time_train_this_epoch: 1152.80380034
+	 time_train_total: 71734.0384879
+	 train_ali_compute_losses_discriminator_loss: 0.648191273212
+	 train_ali_compute_losses_generator_loss: 6.31240749359
+	 train_ali_get_predictions_data_accuracy: 0.732092261314
+	 train_ali_get_predictions_sample_accuracy: 0.851495087147
+	 valid_ali_compute_losses_discriminator_loss: 1.13139533997
+	 valid_ali_compute_losses_generator_loss: 5.68359851837
+	 valid_ali_get_predictions_data_accuracy: 0.557901322842
+	 valid_ali_get_predictions_sample_accuracy: 0.850199997425
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 62, step 1272 |###################################| Elapsed Time: 0:20:14
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 63
+	 iterations_done: 80136
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 80136:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.975672245
+	 time_read_data_total: 1673.55977273
+	 time_train_this_epoch: 1153.616081
+	 time_train_total: 72887.6545689
+	 train_ali_compute_losses_discriminator_loss: 0.713113129139
+	 train_ali_compute_losses_generator_loss: 5.99538421631
+	 train_ali_get_predictions_data_accuracy: 0.703783154488
+	 train_ali_get_predictions_sample_accuracy: 0.825325489044
+	 valid_ali_compute_losses_discriminator_loss: 1.19335973263
+	 valid_ali_compute_losses_generator_loss: 5.00847244263
+	 valid_ali_get_predictions_data_accuracy: 0.540396094322
+	 valid_ali_get_predictions_sample_accuracy: 0.834654450417
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 64
+	 iterations_done: 81408
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 81408:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9212872982
+	 time_read_data_total: 1696.48106003
+	 time_train_this_epoch: 1151.32917762
+	 time_train_total: 74038.9837465
+	 train_ali_compute_losses_discriminator_loss: 0.660098433495
+	 train_ali_compute_losses_generator_loss: 5.99728107452
+	 train_ali_get_predictions_data_accuracy: 0.701101243496
+	 train_ali_get_predictions_sample_accuracy: 0.839786052704
+	 valid_ali_compute_losses_discriminator_loss: 1.2614364624
+	 valid_ali_compute_losses_generator_loss: 5.00532484055
+	 valid_ali_get_predictions_data_accuracy: 0.537290275097
+	 valid_ali_get_predictions_sample_accuracy: 0.830414950848
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 63, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 65
+	 iterations_done: 82680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 82680:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.9763946533
+	 time_read_data_total: 1719.45745468
+	 time_train_this_epoch: 1153.57190681
+	 time_train_total: 75192.5556533
+	 train_ali_compute_losses_discriminator_loss: 0.643132209778
+	 train_ali_compute_losses_generator_loss: 6.52101039886
+	 train_ali_get_predictions_data_accuracy: 0.705203592777
+	 train_ali_get_predictions_sample_accuracy: 0.863664746284
+	 valid_ali_compute_losses_discriminator_loss: 1.25222659111
+	 valid_ali_compute_losses_generator_loss: 5.88723659515
+	 valid_ali_get_predictions_data_accuracy: 0.514931559563
+	 valid_ali_get_predictions_sample_accuracy: 0.880634129047
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 64, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 65, step 1272 |###################################| Elapsed Time: 0:20:17
+	 epoch_started: False
+	 epochs_done: 66
+	 iterations_done: 83952
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 83952:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0278725624
+	 time_read_data_total: 1741.48532724
+	 time_train_this_epoch: 1153.53180265
+	 time_train_total: 76346.087456
+	 train_ali_compute_losses_discriminator_loss: 0.671366333961
+	 train_ali_compute_losses_generator_loss: 6.34557437897
+	 train_ali_get_predictions_data_accuracy: 0.726115107536
+	 train_ali_get_predictions_sample_accuracy: 0.847584724426
+	 valid_ali_compute_losses_discriminator_loss: 1.22023129463
+	 valid_ali_compute_losses_generator_loss: 5.38237571716
+	 valid_ali_get_predictions_data_accuracy: 0.53016191721
+	 valid_ali_get_predictions_sample_accuracy: 0.857737839222
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 66, step 1272 |###################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 67
+	 iterations_done: 85224
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 85224:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0082347393
+	 time_read_data_total: 1763.49356198
+	 time_train_this_epoch: 1152.21571922
+	 time_train_total: 77498.3031752
+	 train_ali_compute_losses_discriminator_loss: 0.630467057228
+	 train_ali_compute_losses_generator_loss: 6.59547567368
+	 train_ali_get_predictions_data_accuracy: 0.729002654552
+	 train_ali_get_predictions_sample_accuracy: 0.854924798012
+	 valid_ali_compute_losses_discriminator_loss: 1.16632914543
+	 valid_ali_compute_losses_generator_loss: 5.95221281052
+	 valid_ali_get_predictions_data_accuracy: 0.542994856834
+	 valid_ali_get_predictions_sample_accuracy: 0.86085575819
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 67, step 1272 |###################################| Elapsed Time: 0:20:14
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 68
+	 iterations_done: 86496
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 86496:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0294406414
+	 time_read_data_total: 1785.52300262
+	 time_train_this_epoch: 1151.70326614
+	 time_train_total: 78650.0064414
+	 train_ali_compute_losses_discriminator_loss: 0.633284926414
+	 train_ali_compute_losses_generator_loss: 6.49279689789
+	 train_ali_get_predictions_data_accuracy: 0.717248558998
+	 train_ali_get_predictions_sample_accuracy: 0.837503910065
+	 valid_ali_compute_losses_discriminator_loss: 1.2206890583
+	 valid_ali_compute_losses_generator_loss: 5.4724779129
+	 valid_ali_get_predictions_data_accuracy: 0.538508057594
+	 valid_ali_get_predictions_sample_accuracy: 0.836356639862
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 68, step 1272 |###################################| Elapsed Time: 0:19:49
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 69
+	 iterations_done: 87768
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 87768:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9802496433
+	 time_read_data_total: 1807.50325227
+	 time_train_this_epoch: 1126.64262462
+	 time_train_total: 79776.649066
+	 train_ali_compute_losses_discriminator_loss: 0.648098826408
+	 train_ali_compute_losses_generator_loss: 6.35226154327
+	 train_ali_get_predictions_data_accuracy: 0.733374238014
+	 train_ali_get_predictions_sample_accuracy: 0.855582356453
+	 valid_ali_compute_losses_discriminator_loss: 1.12738549709
+	 valid_ali_compute_losses_generator_loss: 5.09804296494
+	 valid_ali_get_predictions_data_accuracy: 0.543119668961
+	 valid_ali_get_predictions_sample_accuracy: 0.862105369568
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 69, step 1272 |###################################| Elapsed Time: 0:19:37
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 70
+	 iterations_done: 89040
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 89040:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9793355465
+	 time_read_data_total: 1829.48258781
+	 time_train_this_epoch: 1113.27405572
+	 time_train_total: 80889.9231217
+	 train_ali_compute_losses_discriminator_loss: 0.679383218288
+	 train_ali_compute_losses_generator_loss: 6.59917163849
+	 train_ali_get_predictions_data_accuracy: 0.723579525948
+	 train_ali_get_predictions_sample_accuracy: 0.839781403542
+	 valid_ali_compute_losses_discriminator_loss: 1.20949697495
+	 valid_ali_compute_losses_generator_loss: 5.16253185272
+	 valid_ali_get_predictions_data_accuracy: 0.539536356926
+	 valid_ali_get_predictions_sample_accuracy: 0.843483567238
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 71
+	 iterations_done: 90312
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 90312:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9618432522
+	 time_read_data_total: 1851.44443107
+	 time_train_this_epoch: 1113.36607337
+	 time_train_total: 82003.2891951
+	 train_ali_compute_losses_discriminator_loss: 0.686625480652
+	 train_ali_compute_losses_generator_loss: 5.70523262024
+	 train_ali_get_predictions_data_accuracy: 0.698962271214
+	 train_ali_get_predictions_sample_accuracy: 0.84421145916
+	 valid_ali_compute_losses_discriminator_loss: 1.3353676796
+	 valid_ali_compute_losses_generator_loss: 4.92555522919
+	 valid_ali_get_predictions_data_accuracy: 0.505301117897
+	 valid_ali_get_predictions_sample_accuracy: 0.85224789381
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 70, step 1272 |###################################| Elapsed Time: 0:19:37
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 71, step 1272 |###################################| Elapsed Time: 0:19:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 72
+	 iterations_done: 91584
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 91584:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.963612318
+	 time_read_data_total: 1873.40804338
+	 time_train_this_epoch: 1113.64425874
+	 time_train_total: 83116.9334538
+	 train_ali_compute_losses_discriminator_loss: 0.65610730648
+	 train_ali_compute_losses_generator_loss: 6.0955247879
+	 train_ali_get_predictions_data_accuracy: 0.71969550848
+	 train_ali_get_predictions_sample_accuracy: 0.842217326164
+	 valid_ali_compute_losses_discriminator_loss: 1.21983599663
+	 valid_ali_compute_losses_generator_loss: 5.14821910858
+	 valid_ali_get_predictions_data_accuracy: 0.53659760952
+	 valid_ali_get_predictions_sample_accuracy: 0.839917182922
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 73
+	 iterations_done: 92856
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 92856:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0221328735
+	 time_read_data_total: 1895.43017626
+	 time_train_this_epoch: 1151.06258821
+	 time_train_total: 84267.996042
+	 train_ali_compute_losses_discriminator_loss: 0.69342982769
+	 train_ali_compute_losses_generator_loss: 6.18342590332
+	 train_ali_get_predictions_data_accuracy: 0.71005398035
+	 train_ali_get_predictions_sample_accuracy: 0.843577206135
+	 valid_ali_compute_losses_discriminator_loss: 1.29431664944
+	 valid_ali_compute_losses_generator_loss: 5.51491308212
+	 valid_ali_get_predictions_data_accuracy: 0.522843599319
+	 valid_ali_get_predictions_sample_accuracy: 0.846861481667
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 72, step 1272 |###################################| Elapsed Time: 0:20:14
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 74
+	 iterations_done: 94128
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 94128:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0155119896
+	 time_read_data_total: 1917.44568825
+	 time_train_this_epoch: 1152.4472661
+	 time_train_total: 85420.4433081
+	 train_ali_compute_losses_discriminator_loss: 0.648952782154
+	 train_ali_compute_losses_generator_loss: 6.40176868439
+	 train_ali_get_predictions_data_accuracy: 0.730142533779
+	 train_ali_get_predictions_sample_accuracy: 0.854725658894
+	 valid_ali_compute_losses_discriminator_loss: 1.24261164665
+	 valid_ali_compute_losses_generator_loss: 5.34534025192
+	 valid_ali_get_predictions_data_accuracy: 0.529490828514
+	 valid_ali_get_predictions_sample_accuracy: 0.849628150463
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 73, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 74, step 1272 |###################################| Elapsed Time: 0:20:14
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 75
+	 iterations_done: 95400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 95400:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0078668594
+	 time_read_data_total: 1939.45355511
+	 time_train_this_epoch: 1152.55850101
+	 time_train_total: 86573.0018091
+	 train_ali_compute_losses_discriminator_loss: 0.649950444698
+	 train_ali_compute_losses_generator_loss: 6.49433135986
+	 train_ali_get_predictions_data_accuracy: 0.706129968166
+	 train_ali_get_predictions_sample_accuracy: 0.876819491386
+	 valid_ali_compute_losses_discriminator_loss: 1.29438173771
+	 valid_ali_compute_losses_generator_loss: 5.64809656143
+	 valid_ali_get_predictions_data_accuracy: 0.502577424049
+	 valid_ali_get_predictions_sample_accuracy: 0.883198618889
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 75, step 1272 |###################################| Elapsed Time: 0:20:16
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 76
+	 iterations_done: 96672
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 96672:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9974491596
+	 time_read_data_total: 1961.45100427
+	 time_train_this_epoch: 1152.87712431
+	 time_train_total: 87725.8789334
+	 train_ali_compute_losses_discriminator_loss: 0.618228554726
+	 train_ali_compute_losses_generator_loss: 6.3192782402
+	 train_ali_get_predictions_data_accuracy: 0.722514033318
+	 train_ali_get_predictions_sample_accuracy: 0.860372543335
+	 valid_ali_compute_losses_discriminator_loss: 1.23420119286
+	 valid_ali_compute_losses_generator_loss: 5.28482580185
+	 valid_ali_get_predictions_data_accuracy: 0.529011726379
+	 valid_ali_get_predictions_sample_accuracy: 0.862638354301
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 76, step 1272 |###################################| Elapsed Time: 0:20:14
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 77
+	 iterations_done: 97944
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 97944:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0614395142
+	 time_read_data_total: 1983.51244378
+	 time_train_this_epoch: 1152.40800524
+	 time_train_total: 88878.2869387
+	 train_ali_compute_losses_discriminator_loss: 0.666743159294
+	 train_ali_compute_losses_generator_loss: 6.45978450775
+	 train_ali_get_predictions_data_accuracy: 0.696614861488
+	 train_ali_get_predictions_sample_accuracy: 0.869879722595
+	 valid_ali_compute_losses_discriminator_loss: 1.35543143749
+	 valid_ali_compute_losses_generator_loss: 5.38740539551
+	 valid_ali_get_predictions_data_accuracy: 0.484551608562
+	 valid_ali_get_predictions_sample_accuracy: 0.879405498505
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 77, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 78
+	 iterations_done: 99216
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 99216:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.023758173
+	 time_read_data_total: 2005.53620195
+	 time_train_this_epoch: 1153.53998685
+	 time_train_total: 90031.8269255
+	 train_ali_compute_losses_discriminator_loss: 0.629073798656
+	 train_ali_compute_losses_generator_loss: 6.62607049942
+	 train_ali_get_predictions_data_accuracy: 0.769726634026
+	 train_ali_get_predictions_sample_accuracy: 0.866580605507
+	 valid_ali_compute_losses_discriminator_loss: 1.17938435078
+	 valid_ali_compute_losses_generator_loss: 5.74701404572
+	 valid_ali_get_predictions_data_accuracy: 0.537914335728
+	 valid_ali_get_predictions_sample_accuracy: 0.877949416637
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 79
+	 iterations_done: 100488
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 100488:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0121278763
+	 time_read_data_total: 2027.54832983
+	 time_train_this_epoch: 1153.87103128
+	 time_train_total: 91185.6979568
+	 train_ali_compute_losses_discriminator_loss: 0.668881654739
+	 train_ali_compute_losses_generator_loss: 6.508497715
+	 train_ali_get_predictions_data_accuracy: 0.766725242138
+	 train_ali_get_predictions_sample_accuracy: 0.861143112183
+	 valid_ali_compute_losses_discriminator_loss: 1.17723631859
+	 valid_ali_compute_losses_generator_loss: 5.48488855362
+	 valid_ali_get_predictions_data_accuracy: 0.540037512779
+	 valid_ali_get_predictions_sample_accuracy: 0.861051678658
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 78, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 79, step 1272 |###################################| Elapsed Time: 0:20:16
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 80
+	 iterations_done: 101760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 101760:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9987466335
+	 time_read_data_total: 2049.54707646
+	 time_train_this_epoch: 1153.66160583
+	 time_train_total: 92339.3595626
+	 train_ali_compute_losses_discriminator_loss: 0.640579342842
+	 train_ali_compute_losses_generator_loss: 6.62657022476
+	 train_ali_get_predictions_data_accuracy: 0.717595934868
+	 train_ali_get_predictions_sample_accuracy: 0.864062428474
+	 valid_ali_compute_losses_discriminator_loss: 1.29607832432
+	 valid_ali_compute_losses_generator_loss: 6.0059094429
+	 valid_ali_get_predictions_data_accuracy: 0.492166221142
+	 valid_ali_get_predictions_sample_accuracy: 0.878263771534
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 80, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 81
+	 iterations_done: 103032
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 103032:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0511090755
+	 time_read_data_total: 2071.59818554
+	 time_train_this_epoch: 1152.8389411
+	 time_train_total: 93492.1985037
+	 train_ali_compute_losses_discriminator_loss: 0.62764275074
+	 train_ali_compute_losses_generator_loss: 6.44763708115
+	 train_ali_get_predictions_data_accuracy: 0.753866076469
+	 train_ali_get_predictions_sample_accuracy: 0.870912075043
+	 valid_ali_compute_losses_discriminator_loss: 1.24885010719
+	 valid_ali_compute_losses_generator_loss: 5.38621044159
+	 valid_ali_get_predictions_data_accuracy: 0.515501499176
+	 valid_ali_get_predictions_sample_accuracy: 0.87451171875
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 82
+	 iterations_done: 104304
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 104304:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0154194832
+	 time_read_data_total: 2093.61360502
+	 time_train_this_epoch: 1152.28925848
+	 time_train_total: 94644.4877622
+	 train_ali_compute_losses_discriminator_loss: 0.648055613041
+	 train_ali_compute_losses_generator_loss: 6.50982761383
+	 train_ali_get_predictions_data_accuracy: 0.771903395653
+	 train_ali_get_predictions_sample_accuracy: 0.848935902119
+	 valid_ali_compute_losses_discriminator_loss: 1.1930668354
+INFO:blocks.extensions.saveload:Checkpointing has finished
+	 valid_ali_compute_losses_generator_loss: 5.44131565094
+Epoch 81, step 1272 |###################################| Elapsed Time: 0:20:16
+	 valid_ali_get_predictions_data_accuracy: 0.542698681355
+	 valid_ali_get_predictions_sample_accuracy: 0.845941841602
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 82, step 1272 |###################################| Elapsed Time: 0:20:20
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 83
+	 iterations_done: 105576
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 105576:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9741938114
+	 time_read_data_total: 2115.58779883
+	 time_train_this_epoch: 1153.27616382
+	 time_train_total: 95797.763926
+	 train_ali_compute_losses_discriminator_loss: 0.637461543083
+	 train_ali_compute_losses_generator_loss: 6.41606998444
+	 train_ali_get_predictions_data_accuracy: 0.789549291134
+	 train_ali_get_predictions_sample_accuracy: 0.845537483692
+	 valid_ali_compute_losses_discriminator_loss: 1.19262290001
+	 valid_ali_compute_losses_generator_loss: 5.64826393127
+	 valid_ali_get_predictions_data_accuracy: 0.541602671146
+	 valid_ali_get_predictions_sample_accuracy: 0.859388947487
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 84
+	 iterations_done: 106848
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 106848:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0992295742
+	 time_read_data_total: 2137.68702841
+	 time_train_this_epoch: 1152.87075114
+	 time_train_total: 96950.6346772
+	 train_ali_compute_losses_discriminator_loss: 0.638941168785
+	 train_ali_compute_losses_generator_loss: 6.27120304108
+	 train_ali_get_predictions_data_accuracy: 0.742295622826
+	 train_ali_get_predictions_sample_accuracy: 0.864870846272
+	 valid_ali_compute_losses_discriminator_loss: 1.27641260624
+	 valid_ali_compute_losses_generator_loss: 5.41184711456
+	 valid_ali_get_predictions_data_accuracy: 0.514551460743
+	 valid_ali_get_predictions_sample_accuracy: 0.872694611549
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 83, step 1272 |###################################| Elapsed Time: 0:20:14
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 85
+	 iterations_done: 108120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 108120:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0501458645
+	 time_read_data_total: 2159.73717427
+	 time_train_this_epoch: 1153.14301944
+	 time_train_total: 98103.7776966
+	 train_ali_compute_losses_discriminator_loss: 0.629089653492
+	 train_ali_compute_losses_generator_loss: 6.23079395294
+	 train_ali_get_predictions_data_accuracy: 0.756174683571
+	 train_ali_get_predictions_sample_accuracy: 0.860636234283
+	 valid_ali_compute_losses_discriminator_loss: 1.27730643749
+	 valid_ali_compute_losses_generator_loss: 5.35563707352
+	 valid_ali_get_predictions_data_accuracy: 0.527344286442
+	 valid_ali_get_predictions_sample_accuracy: 0.853105425835
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 84, step 1272 |###################################| Elapsed Time: 0:20:18
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 86
+	 iterations_done: 109392
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 109392:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0692653656
+	 time_read_data_total: 2181.80643964
+	 time_train_this_epoch: 1152.30465198
+	 time_train_total: 99256.0823486
+	 train_ali_compute_losses_discriminator_loss: 0.641679406166
+	 train_ali_compute_losses_generator_loss: 6.15437602997
+	 train_ali_get_predictions_data_accuracy: 0.771648824215
+	 train_ali_get_predictions_sample_accuracy: 0.858029186726
+	 valid_ali_compute_losses_discriminator_loss: 1.27703297138
+	 valid_ali_compute_losses_generator_loss: 4.94434070587
+	 valid_ali_get_predictions_data_accuracy: 0.507384896278
+	 valid_ali_get_predictions_sample_accuracy: 0.867374062538
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 85, step 1272 |###################################| Elapsed Time: 0:20:19
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 87
+	 iterations_done: 110664
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 110664:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0513846874
+	 time_read_data_total: 2203.85782433
+	 time_train_this_epoch: 1153.6275363
+	 time_train_total: 100409.709885
+	 train_ali_compute_losses_discriminator_loss: 0.639636993408
+	 train_ali_compute_losses_generator_loss: 6.46820068359
+	 train_ali_get_predictions_data_accuracy: 0.785373330116
+	 train_ali_get_predictions_sample_accuracy: 0.834171950817
+	 valid_ali_compute_losses_discriminator_loss: 1.16652369499
+	 valid_ali_compute_losses_generator_loss: 5.31931400299
+	 valid_ali_get_predictions_data_accuracy: 0.549642622471
+	 valid_ali_get_predictions_sample_accuracy: 0.847344875336
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 86, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 87, step 1272 |###################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 88
+	 iterations_done: 111936
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 111936:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0134205818
+	 time_read_data_total: 2225.87124491
+	 time_train_this_epoch: 1153.28343797
+	 time_train_total: 101562.993323
+	 train_ali_compute_losses_discriminator_loss: 0.628464519978
+	 train_ali_compute_losses_generator_loss: 6.78023147583
+	 train_ali_get_predictions_data_accuracy: 0.773947358131
+	 train_ali_get_predictions_sample_accuracy: 0.877213478088
+	 valid_ali_compute_losses_discriminator_loss: 1.23538935184
+	 valid_ali_compute_losses_generator_loss: 6.16556501389
+	 valid_ali_get_predictions_data_accuracy: 0.525643587112
+	 valid_ali_get_predictions_sample_accuracy: 0.881874203682
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 89
+	 iterations_done: 113208
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 113208:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0892970562
+	 time_read_data_total: 2247.96054196
+	 time_train_this_epoch: 1153.64029908
+	 time_train_total: 102716.633622
+	 train_ali_compute_losses_discriminator_loss: 0.618108510971
+	 train_ali_compute_losses_generator_loss: 6.38552379608
+	 train_ali_get_predictions_data_accuracy: 0.744299352169
+	 train_ali_get_predictions_sample_accuracy: 0.878190338612
+	 valid_ali_compute_losses_discriminator_loss: 1.29001259804
+	 valid_ali_compute_losses_generator_loss: 5.13444185257
+	 valid_ali_get_predictions_data_accuracy: 0.503190100193
+	 valid_ali_get_predictions_sample_accuracy: 0.877533733845
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 88, step 1272 |###################################| Elapsed Time: 0:20:20
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 90
+	 iterations_done: 114480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 114480:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9531257153
+	 time_read_data_total: 2269.91366768
+	 time_train_this_epoch: 1153.45766973
+	 time_train_total: 103870.091292
+	 train_ali_compute_losses_discriminator_loss: 0.623902201653
+	 train_ali_compute_losses_generator_loss: 6.33824253082
+	 train_ali_get_predictions_data_accuracy: 0.730925679207
+	 train_ali_get_predictions_sample_accuracy: 0.870262026787
+	 valid_ali_compute_losses_discriminator_loss: 1.38991332054
+	 valid_ali_compute_losses_generator_loss: 5.46379470825
+	 valid_ali_get_predictions_data_accuracy: 0.479447603226
+	 valid_ali_get_predictions_sample_accuracy: 0.885433197021
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 89, step 1272 |###################################| Elapsed Time: 0:20:15
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 90, step 1272 |###################################| Elapsed Time: 0:20:15
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 91
+	 iterations_done: 115752
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 115752:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9621362686
+	 time_read_data_total: 2291.87580395
+	 time_train_this_epoch: 1153.31726909
+	 time_train_total: 105023.408561
+	 train_ali_compute_losses_discriminator_loss: 0.628210008144
+	 train_ali_compute_losses_generator_loss: 6.21745300293
+	 train_ali_get_predictions_data_accuracy: 0.763731896877
+	 train_ali_get_predictions_sample_accuracy: 0.837384819984
+	 valid_ali_compute_losses_discriminator_loss: 1.29435610771
+	 valid_ali_compute_losses_generator_loss: 5.39921617508
+	 valid_ali_get_predictions_data_accuracy: 0.519811272621
+	 valid_ali_get_predictions_sample_accuracy: 0.8566172719
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 92
+	 iterations_done: 117024
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 117024:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0010237694
+	 time_read_data_total: 2313.87682772
+	 time_train_this_epoch: 1152.52550554
+	 time_train_total: 106175.934066
+	 train_ali_compute_losses_discriminator_loss: 0.630244016647
+	 train_ali_compute_losses_generator_loss: 6.24139547348
+	 train_ali_get_predictions_data_accuracy: 0.779728055
+	 train_ali_get_predictions_sample_accuracy: 0.862152457237
+	 valid_ali_compute_losses_discriminator_loss: 1.25933921337
+	 valid_ali_compute_losses_generator_loss: 5.37104845047
+	 valid_ali_get_predictions_data_accuracy: 0.524087488651
+	 valid_ali_get_predictions_sample_accuracy: 0.866402626038
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 91, step 1272 |###################################| Elapsed Time: 0:20:16
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 92, step 1272 |###################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 93
+	 iterations_done: 118296
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 118296:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9932126999
+	 time_read_data_total: 2335.87004042
+	 time_train_this_epoch: 1152.83307266
+	 time_train_total: 107328.767139
+	 train_ali_compute_losses_discriminator_loss: 0.62132614851
+	 train_ali_compute_losses_generator_loss: 6.5076842308
+	 train_ali_get_predictions_data_accuracy: 0.741689324379
+	 train_ali_get_predictions_sample_accuracy: 0.869171977043
+	 valid_ali_compute_losses_discriminator_loss: 1.34424996376
+	 valid_ali_compute_losses_generator_loss: 5.54043483734
+	 valid_ali_get_predictions_data_accuracy: 0.506951928139
+	 valid_ali_get_predictions_sample_accuracy: 0.86299687624
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 93, step 1272 |###################################| Elapsed Time: 0:20:04
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 94
+	 iterations_done: 119568
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 119568:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0297496319
+	 time_read_data_total: 2357.89979005
+	 time_train_this_epoch: 1143.45383191
+	 time_train_total: 108472.220971
+	 train_ali_compute_losses_discriminator_loss: 0.623002409935
+	 train_ali_compute_losses_generator_loss: 6.27616596222
+	 train_ali_get_predictions_data_accuracy: 0.74753177166
+	 train_ali_get_predictions_sample_accuracy: 0.884499371052
+	 valid_ali_compute_losses_discriminator_loss: 1.37989127636
+	 valid_ali_compute_losses_generator_loss: 5.60373783112
+	 valid_ali_get_predictions_data_accuracy: 0.485167264938
+	 valid_ali_get_predictions_sample_accuracy: 0.885845839977
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 94, step 1272 |###################################| Elapsed Time: 0:19:34
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 95
+	 iterations_done: 120840
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 120840:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9537317753
+	 time_read_data_total: 2379.85352182
+	 time_train_this_epoch: 1112.0755229
+	 time_train_total: 109584.296494
+	 train_ali_compute_losses_discriminator_loss: 0.619596540928
+	 train_ali_compute_losses_generator_loss: 6.41979598999
+	 train_ali_get_predictions_data_accuracy: 0.780141949654
+	 train_ali_get_predictions_sample_accuracy: 0.874087691307
+	 valid_ali_compute_losses_discriminator_loss: 1.34397828579
+	 valid_ali_compute_losses_generator_loss: 5.5205283165
+	 valid_ali_get_predictions_data_accuracy: 0.500499367714
+	 valid_ali_get_predictions_sample_accuracy: 0.878938555717
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 96
+	 iterations_done: 122112
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 122112:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9530029297
+	 time_read_data_total: 2401.80652475
+	 time_train_this_epoch: 1112.09020615
+	 time_train_total: 110696.3867
+	 train_ali_compute_losses_discriminator_loss: 0.628202557564
+	 train_ali_compute_losses_generator_loss: 6.24385118484
+	 train_ali_get_predictions_data_accuracy: 0.757122397423
+	 train_ali_get_predictions_sample_accuracy: 0.863373875618
+	 valid_ali_compute_losses_discriminator_loss: 1.35364449024
+	 valid_ali_compute_losses_generator_loss: 5.48075675964
+	 valid_ali_get_predictions_data_accuracy: 0.504920482635
+	 valid_ali_get_predictions_sample_accuracy: 0.858700752258
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 95, step 1272 |###################################| Elapsed Time: 0:19:36
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 97
+	 iterations_done: 123384
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 123384:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9964506626
+	 time_read_data_total: 2423.80297542
+	 time_train_this_epoch: 1112.16084266
+	 time_train_total: 111808.547543
+	 train_ali_compute_losses_discriminator_loss: 0.620002627373
+	 train_ali_compute_losses_generator_loss: 6.64510965347
+	 train_ali_get_predictions_data_accuracy: 0.798621058464
+	 train_ali_get_predictions_sample_accuracy: 0.852993488312
+	 valid_ali_compute_losses_discriminator_loss: 1.23659706116
+	 valid_ali_compute_losses_generator_loss: 5.79238986969
+	 valid_ali_get_predictions_data_accuracy: 0.528967499733
+	 valid_ali_get_predictions_sample_accuracy: 0.860233128071
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 96, step 1272 |###################################| Elapsed Time: 0:19:37
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 97, step 1272 |###################################| Elapsed Time: 0:19:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 98
+	 iterations_done: 124656
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 124656:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9947097301
+	 time_read_data_total: 2445.79768515
+	 time_train_this_epoch: 1112.73777938
+	 time_train_total: 112921.285322
+	 train_ali_compute_losses_discriminator_loss: 0.623019814491
+	 train_ali_compute_losses_generator_loss: 6.43880748749
+	 train_ali_get_predictions_data_accuracy: 0.788224995136
+	 train_ali_get_predictions_sample_accuracy: 0.845194041729
+	 valid_ali_compute_losses_discriminator_loss: 1.27921676636
+	 valid_ali_compute_losses_generator_loss: 5.1486787796
+	 valid_ali_get_predictions_data_accuracy: 0.541200816631
+	 valid_ali_get_predictions_sample_accuracy: 0.850028038025
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 98, step 1272 |###################################| Elapsed Time: 0:19:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 99
+	 iterations_done: 125928
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 125928:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.8798539639
+	 time_read_data_total: 2468.67753911
+	 time_train_this_epoch: 1111.62934327
+	 time_train_total: 114032.914665
+	 train_ali_compute_losses_discriminator_loss: 0.635810494423
+	 train_ali_compute_losses_generator_loss: 5.99559259415
+	 train_ali_get_predictions_data_accuracy: 0.802941918373
+	 train_ali_get_predictions_sample_accuracy: 0.860903441906
+	 valid_ali_compute_losses_discriminator_loss: 1.33181858063
+	 valid_ali_compute_losses_generator_loss: 5.29150152206
+	 valid_ali_get_predictions_data_accuracy: 0.514588594437
+	 valid_ali_get_predictions_sample_accuracy: 0.864471316338
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 99, step 1272 |###################################| Elapsed Time: 0:19:33
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 100
+	 iterations_done: 127200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 127200:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0377635956
+	 time_read_data_total: 2490.71530271
+	 time_train_this_epoch: 1112.45274901
+	 time_train_total: 115145.367414
+	 train_ali_compute_losses_discriminator_loss: 0.616977989674
+	 train_ali_compute_losses_generator_loss: 6.38227510452
+	 train_ali_get_predictions_data_accuracy: 0.790582478046
+	 train_ali_get_predictions_sample_accuracy: 0.842401206493
+	 valid_ali_compute_losses_discriminator_loss: 1.30791831017
+	 valid_ali_compute_losses_generator_loss: 5.22802448273
+	 valid_ali_get_predictions_data_accuracy: 0.530440270901
+	 valid_ali_get_predictions_sample_accuracy: 0.843588709831
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 101
+	 iterations_done: 128472
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 128472:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0378932953
+	 time_read_data_total: 2512.753196
+	 time_train_this_epoch: 1112.29375005
+	 time_train_total: 116257.661164
+	 train_ali_compute_losses_discriminator_loss: 0.619315087795
+	 train_ali_compute_losses_generator_loss: 6.51981115341
+	 train_ali_get_predictions_data_accuracy: 0.777374148369
+	 train_ali_get_predictions_sample_accuracy: 0.868718504906
+	 valid_ali_compute_losses_discriminator_loss: 1.31049203873
+	 valid_ali_compute_losses_generator_loss: 5.48298358917
+	 valid_ali_get_predictions_data_accuracy: 0.504125237465
+	 valid_ali_get_predictions_sample_accuracy: 0.878901779652
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 100, step 1272 |##################################| Elapsed Time: 0:19:35
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 101, step 1272 |##################################| Elapsed Time: 0:20:07
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 102
+	 iterations_done: 129744
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 129744:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0100197792
+	 time_read_data_total: 2534.76321578
+	 time_train_this_epoch: 1144.59987164
+	 time_train_total: 117402.261036
+	 train_ali_compute_losses_discriminator_loss: 0.664413452148
+	 train_ali_compute_losses_generator_loss: 6.49502038956
+	 train_ali_get_predictions_data_accuracy: 0.76351416111
+	 train_ali_get_predictions_sample_accuracy: 0.886068701744
+	 valid_ali_compute_losses_discriminator_loss: 1.44607675076
+	 valid_ali_compute_losses_generator_loss: 5.95269918442
+	 valid_ali_get_predictions_data_accuracy: 0.460605144501
+	 valid_ali_get_predictions_sample_accuracy: 0.901399612427
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 102, step 1272 |##################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 103
+	 iterations_done: 131016
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 131016:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.4890172482
+	 time_read_data_total: 2557.25223303
+	 time_train_this_epoch: 1153.72601891
+	 time_train_total: 118555.987055
+	 train_ali_compute_losses_discriminator_loss: 0.600370287895
+	 train_ali_compute_losses_generator_loss: 6.4904794693
+	 train_ali_get_predictions_data_accuracy: 0.760758936405
+	 train_ali_get_predictions_sample_accuracy: 0.873253941536
+	 valid_ali_compute_losses_discriminator_loss: 1.39608108997
+	 valid_ali_compute_losses_generator_loss: 5.81170654297
+	 valid_ali_get_predictions_data_accuracy: 0.482247680426
+	 valid_ali_get_predictions_sample_accuracy: 0.873827934265
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 104
+	 iterations_done: 132288
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 132288:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.1528396606
+	 time_read_data_total: 2579.40507269
+	 time_train_this_epoch: 1156.14337516
+	 time_train_total: 119712.13043
+	 train_ali_compute_losses_discriminator_loss: 0.594435811043
+	 train_ali_compute_losses_generator_loss: 6.84305286407
+	 train_ali_get_predictions_data_accuracy: 0.786664485931
+	 train_ali_get_predictions_sample_accuracy: 0.874941468239
+	 valid_ali_compute_losses_discriminator_loss: 1.36857223511
+	 valid_ali_compute_losses_generator_loss: 5.88934516907
+	 valid_ali_get_predictions_data_accuracy: 0.498578935862
+	 valid_ali_get_predictions_sample_accuracy: 0.87520390749
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 103, step 1272 |##################################| Elapsed Time: 0:20:20
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 104, step 1272 |##################################| Elapsed Time: 0:20:16
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 105
+	 iterations_done: 133560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 133560:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0399341583
+	 time_read_data_total: 2601.44500685
+	 time_train_this_epoch: 1154.17923594
+	 time_train_total: 120866.309666
+	 train_ali_compute_losses_discriminator_loss: 0.585752129555
+	 train_ali_compute_losses_generator_loss: 6.17841243744
+	 train_ali_get_predictions_data_accuracy: 0.770856499672
+	 train_ali_get_predictions_sample_accuracy: 0.885310769081
+	 valid_ali_compute_losses_discriminator_loss: 1.31552243233
+	 valid_ali_compute_losses_generator_loss: 5.18896961212
+	 valid_ali_get_predictions_data_accuracy: 0.499764978886
+	 valid_ali_get_predictions_sample_accuracy: 0.88810300827
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 105, step 1272 |##################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 106
+	 iterations_done: 134832
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 134832:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0420525074
+	 time_read_data_total: 2623.48705935
+	 time_train_this_epoch: 1154.49772525
+	 time_train_total: 122020.807391
+	 train_ali_compute_losses_discriminator_loss: 0.617790579796
+	 train_ali_compute_losses_generator_loss: 6.29177761078
+	 train_ali_get_predictions_data_accuracy: 0.775213360786
+	 train_ali_get_predictions_sample_accuracy: 0.887490749359
+	 valid_ali_compute_losses_discriminator_loss: 1.38380789757
+	 valid_ali_compute_losses_generator_loss: 5.55387210846
+	 valid_ali_get_predictions_data_accuracy: 0.491608440876
+	 valid_ali_get_predictions_sample_accuracy: 0.893009960651
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 106, step 1272 |##################################| Elapsed Time: 0:20:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 107
+	 iterations_done: 136104
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 136104:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.943107605
+	 time_read_data_total: 2645.43016696
+	 time_train_this_epoch: 1154.9697566
+	 time_train_total: 123175.777148
+	 train_ali_compute_losses_discriminator_loss: 0.605017066002
+	 train_ali_compute_losses_generator_loss: 6.32037067413
+	 train_ali_get_predictions_data_accuracy: 0.802393257618
+	 train_ali_get_predictions_sample_accuracy: 0.860107719898
+	 valid_ali_compute_losses_discriminator_loss: 1.32895886898
+	 valid_ali_compute_losses_generator_loss: 5.14918851852
+	 valid_ali_get_predictions_data_accuracy: 0.510882258415
+	 valid_ali_get_predictions_sample_accuracy: 0.859532356262
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 107, step 1272 |##################################| Elapsed Time: 0:20:17
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 108
+	 iterations_done: 137376
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 137376:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9968087673
+	 time_read_data_total: 2667.42697573
+	 time_train_this_epoch: 1155.23628402
+	 time_train_total: 124331.013432
+	 train_ali_compute_losses_discriminator_loss: 0.621245205402
+	 train_ali_compute_losses_generator_loss: 5.98481321335
+	 train_ali_get_predictions_data_accuracy: 0.698899388313
+	 train_ali_get_predictions_sample_accuracy: 0.883691430092
+	 valid_ali_compute_losses_discriminator_loss: 1.46462404728
+	 valid_ali_compute_losses_generator_loss: 5.12260103226
+	 valid_ali_get_predictions_data_accuracy: 0.45184135437
+	 valid_ali_get_predictions_sample_accuracy: 0.890352904797
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 108, step 1272 |##################################| Elapsed Time: 0:20:16
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 109
+	 iterations_done: 138648
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 138648:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 21.9432346821
+	 time_read_data_total: 2689.37021041
+	 time_train_this_epoch: 1155.18139029
+	 time_train_total: 125486.194822
+	 train_ali_compute_losses_discriminator_loss: 0.592519164085
+	 train_ali_compute_losses_generator_loss: 6.43880701065
+	 train_ali_get_predictions_data_accuracy: 0.793505609035
+	 train_ali_get_predictions_sample_accuracy: 0.871802449226
+	 valid_ali_compute_losses_discriminator_loss: 1.35123860836
+	 valid_ali_compute_losses_generator_loss: 5.24607181549
+	 valid_ali_get_predictions_data_accuracy: 0.491377294064
+	 valid_ali_get_predictions_sample_accuracy: 0.880544066429
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 110
+	 iterations_done: 139920
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 139920:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.0652797222
+	 time_read_data_total: 2711.43549013
+	 time_train_this_epoch: 1154.08957958
+	 time_train_total: 126640.284402
+	 train_ali_compute_losses_discriminator_loss: 0.643694579601
+	 train_ali_compute_losses_generator_loss: 6.00480318069
+	 train_ali_get_predictions_data_accuracy: 0.70434820652
+	 train_ali_get_predictions_sample_accuracy: 0.879612267017
+	 valid_ali_compute_losses_discriminator_loss: 1.58463168144
+	 valid_ali_compute_losses_generator_loss: 5.14814472198
+	 valid_ali_get_predictions_data_accuracy: 0.427777945995
+	 valid_ali_get_predictions_sample_accuracy: 0.89187514782
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 109, step 1272 |##################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 111
+	 iterations_done: 141192
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 141192:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.2265584469
+	 time_read_data_total: 2733.66204858
+	 time_train_this_epoch: 1154.2404356
+	 time_train_total: 127794.524837
+	 train_ali_compute_losses_discriminator_loss: 0.611635327339
+	 train_ali_compute_losses_generator_loss: 6.42423868179
+	 train_ali_get_predictions_data_accuracy: 0.794175505638
+	 train_ali_get_predictions_sample_accuracy: 0.883127391338
+	 valid_ali_compute_losses_discriminator_loss: 1.3935251236
+	 valid_ali_compute_losses_generator_loss: 5.43641757965
+	 valid_ali_get_predictions_data_accuracy: 0.485706478357
+	 valid_ali_get_predictions_sample_accuracy: 0.891237616539
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 110, step 1272 |##################################| Elapsed Time: 0:20:17
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 112
+	 iterations_done: 142464
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 142464:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.179970026
+	 time_read_data_total: 2755.8420186
+	 time_train_this_epoch: 1154.83385158
+	 time_train_total: 128949.358689
+	 train_ali_compute_losses_discriminator_loss: 0.600587487221
+	 train_ali_compute_losses_generator_loss: 6.42788696289
+	 train_ali_get_predictions_data_accuracy: 0.800534427166
+	 train_ali_get_predictions_sample_accuracy: 0.872601211071
+	 valid_ali_compute_losses_discriminator_loss: 1.40794062614
+	 valid_ali_compute_losses_generator_loss: 5.43964958191
+	 valid_ali_get_predictions_data_accuracy: 0.489781469107
+	 valid_ali_get_predictions_sample_accuracy: 0.874824821949
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 111, step 1272 |##################################| Elapsed Time: 0:20:22
+WARNING:blocks.main_loop:Received epoch interrupt signal.
+
+Blocks will complete this epoch of training and run extensions before exiting. If you do not want to complete this epoch, press CTRL + C again to stop training after the current batch.
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 113
+	 iterations_done: 143736
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 143736:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 22.1087481976
+	 time_read_data_total: 2777.9507668
+	 time_train_this_epoch: 1154.96307945
+	 time_train_total: 130104.321768
+	 train_ali_compute_losses_discriminator_loss: 0.58589631319
+	 train_ali_compute_losses_generator_loss: 6.52250051498
+	 train_ali_get_predictions_data_accuracy: 0.783571541309
+	 train_ali_get_predictions_sample_accuracy: 0.890750706196
+	 valid_ali_compute_losses_discriminator_loss: 1.47478652
+	 valid_ali_compute_losses_generator_loss: 5.49518299103
+	 valid_ali_get_predictions_data_accuracy: 0.460828632116
+	 valid_ali_get_predictions_sample_accuracy: 0.893725991249
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 112, step 1272 |##################################| Elapsed Time: 0:20:18
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+-------------------------------------------------------------------------------
+TRAINING HAS BEEN FINISHED:
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 113
+	 iterations_done: 143736
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 143736:
+	 saved_to: ('ali_conditional_celeba.tar', 'ali_conditional_celeba.tar')
+	 time_read_data_this_epoch: 22.1087481976
+	 time_read_data_total: 2777.9507668
+	 time_train_this_epoch: 1154.96307945
+	 time_train_total: 130104.321768
+	 train_ali_compute_losses_discriminator_loss: 0.58589631319
+	 train_ali_compute_losses_generator_loss: 6.52250051498
+	 train_ali_get_predictions_data_accuracy: 0.783571541309
+	 train_ali_get_predictions_sample_accuracy: 0.890750706196
+	 training_finished: True
+	 valid_ali_compute_losses_discriminator_loss: 1.47478652
+	 valid_ali_compute_losses_generator_loss: 5.49518299103
+	 valid_ali_get_predictions_data_accuracy: 0.460828632116
+	 valid_ali_get_predictions_sample_accuracy: 0.893725991249
+
+
+Process finished with exit code 0
+
