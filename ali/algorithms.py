@@ -7,7 +7,8 @@ from blocks.algorithms import GradientDescent, CompositeRule, Restrict
 
 def ali_algorithm(discriminator_loss, discriminator_parameters,
                   discriminator_step_rule, generator_loss,
-                  generator_parameters, generator_step_rule):
+                  generator_parameters, generator_step_rule,
+                  MI_loss, mi_step_rule ):
     """Instantiates a training algorithm for ALI.
 
     Parameters
@@ -32,12 +33,19 @@ def ali_algorithm(discriminator_loss, discriminator_parameters,
     gradients.update(
         zip(generator_parameters,
             theano.grad(generator_loss, generator_parameters)))
+    gradients.update(
+        zip(generator_parameters,
+            theano.grad(MI_loss, generator_parameters)))
     step_rule = CompositeRule([Restrict(discriminator_step_rule,
                                         discriminator_parameters),
                                Restrict(generator_step_rule,
-                                        generator_parameters)])
+                                        generator_parameters),
+                               Restrict(mi_step_rule,
+                                        generator_parameters)]
+                               )
+
     return GradientDescent(
-        cost=generator_loss + discriminator_loss,
+        cost=generator_loss + discriminator_loss + MI_loss,
         gradients=gradients,
         parameters=discriminator_parameters + generator_parameters,
         step_rule=step_rule)

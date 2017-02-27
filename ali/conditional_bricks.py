@@ -4,10 +4,12 @@ from theano import tensor
 from theano import (function, )
 
 from blocks.bricks.base import Brick, application, lazy
-from blocks.bricks import LeakyRectifier, Logistic
-from blocks.bricks import (Linear, Sequence, )
-from blocks.bricks.conv import (Convolutional, ConvolutionalSequence, ConvolutionalSequence, )
+from blocks.bricks import LeakyRectifier, Logistic, Softmax
+from blocks.bricks import (MLP, Rectifier, FeedforwardSequence, Linear, Sequence)
+from blocks.bricks.conv import (Convolutional, ConvolutionalSequence, ConvolutionalSequence, MaxPooling, Flattener )
 from blocks.bricks.interfaces import Initializable, Random
+from toolz.itertoolz import interleave
+import logging
 
 from blocks.initialization import IsotropicGaussian, Constant
 
@@ -15,6 +17,104 @@ from blocks.select import Selector
 
 from ali.bricks import ConvMaxout
 from ali.utils import get_log_odds, conv_brick, conv_transpose_brick, bn_brick
+# ...                 weights_init=IsotropicGaussian(),
+# ...                 biases_init=Constant(0.01))
+import numpy as np
+
+class LeNet(FeedforwardSequence, Initializable):
+    """LeNet-like convolutional network.
+
+    The class implements LeNet, which is a convolutional sequence with
+    an MLP on top (several fully-connected layers). For details see
+    [LeCun95]_.
+
+    .. [LeCun95] LeCun, Yann, et al.
+       *Comparison of learning algorithms for handwritten digit
+       recognition.*,
+       International conference on artificial neural networks. Vol. 60.
+
+    Parameters
+    ----------
+    conv_activations : list of :class:`.Brick`
+        Activations for convolutional network.
+    num_channels : int
+        Number of channels in the input image.
+    image_shape : tuple
+        Input image shape.
+    filter_sizes : list of tuples
+        Filter sizes of :class:`.blocks.conv.ConvolutionalLayer`.
+    feature_maps : list
+        Number of filters for each of convolutions.
+    pooling_sizes : list of tuples
+        Sizes of max pooling for each convolutional layer.
+    top_mlp_activations : list of :class:`.blocks.bricks.Activation`
+        List of activations for the top MLP.
+    top_mlp_dims : list
+        Numbers of hidden units and the output dimension of the top MLP.
+    conv_step : tuples
+        Step of convolution (similar for all layers).
+    border_mode : str
+        Border mode of convolution (similar for all layers).
+
+    """
+    def __init__(self, conv_activations, num_channels, image_shape,
+                 filter_sizes, feature_maps, pooling_sizes,
+                 top_mlp_activations, top_mlp_dims,
+                 conv_step=None, border_mode='valid', **kwargs):
+        if conv_step is None:
+            self.conv_step = (1, 1)
+        else:
+            self.conv_step = conv_step
+        self.num_channels = num_channels
+        self.image_shape = image_shape
+        self.top_mlp_activations = top_mlp_activations
+        self.top_mlp_dims = top_mlp_dims
+        self.border_mode = border_mode
+
+        conv_parameters = zip(filter_sizes, feature_maps)
+
+        # Construct convolutional layers with corresponding parameters
+        self.layers = list(interleave([
+            (Convolutional(filter_size=filter_size,
+                           num_filters=num_filter,
+                           step=self.conv_step,
+                           border_mode=self.border_mode,
+                           name='conv_{}'.format(i))
+             for i, (filter_size, num_filter)
+             in enumerate(conv_parameters)),
+            conv_activations,
+            (MaxPooling(size, name='pool_{}'.format(i))
+             for i, size in enumerate(pooling_sizes))]))
+
+        self.conv_sequence = ConvolutionalSequence(self.layers, num_channels,
+                                                   image_size=image_shape)
+
+        # We need to flatten the output of the last convolutional layer.
+        # This brick accepts a tensor of dimension (batch_size, ...) and
+        # returns a matrix (batch_size, features)
+        self.flattener = Flattener()
+
+        # Construct a top MLP
+        self.top_mlp = MLP(top_mlp_activations, top_mlp_dims)
+
+        application_methods = [self.conv_sequence.apply, self.flattener.apply,
+                               self.top_mlp.apply]
+        super(LeNet, self).__init__(application_methods, **kwargs)
+
+    @property
+    def output_dim(self):
+        return self.top_mlp_dims[-1]
+
+    @output_dim.setter
+    def output_dim(self, value):
+        self.top_mlp_dims[-1] = value
+
+    def _push_allocation_config(self):
+        self.conv_sequence._push_allocation_config()
+        conv_out_dim = self.conv_sequence.get_dim('output')
+
+        self.top_mlp.activations = self.top_mlp_activations
+        self.top_mlp.dims = [np.prod(conv_out_dim)] + self.top_mlp_dims
 
 
 class Embedder(Initializable):
@@ -219,17 +319,18 @@ class ConditionalALI(Initializable, Random):
         Dimensionality of embedding
 
     """
-    def __init__(self, encoder, decoder, discriminator, n_cond, n_emb, **kwargs):
+    def __init__(self, encoder, decoder, classifier, discriminator, n_cond, n_emb, **kwargs):
         self.encoder = encoder
         self.decoder = decoder
         self.discriminator = discriminator
+        self.classifier = classifier
         self.n_cond = n_cond  # Features in conditional data
         self.n_emb = n_emb  # Features in embeddings
         self.embedder = Embedder(n_cond, n_emb, output_type='conv')
 
         super(ConditionalALI, self).__init__(**kwargs)
         self.children.extend([self.encoder, self.decoder, self.discriminator,
-                              self.embedder])
+                              self.embedder, self.classifier])
 
     @property
     def discriminator_parameters(self):
@@ -239,11 +340,17 @@ class ConditionalALI(Initializable, Random):
     @property
     def generator_parameters(self):
         return list(
+
             Selector([self.encoder, self.decoder]).get_parameters().values())
     @property
     def embedding_parameters(self):
         return list(
             Selector([self.embedder]).get_parameters().values())
+
+    @property
+    def classifier_parameters(self):
+        return list(
+            Selector([self.classifier]).get_parameters().values())
 
     @application(inputs=['x', 'z_hat', 'x_tilde', 'z', 'y'],
                  outputs=['data_preds', 'sample_preds'])
@@ -283,6 +390,7 @@ class ConditionalALI(Initializable, Random):
         generator_loss = (tensor.nnet.softplus(data_preds) +
                           tensor.nnet.softplus(-sample_preds)).mean()
 
+
         return discriminator_loss, generator_loss
 
     @application(inputs=['z', 'y'], outputs=['samples'])
@@ -317,7 +425,6 @@ class ConditionalALI(Initializable, Random):
     def decode_embedded(self, z, e):
         decoded = self.decoder.apply(z, e)
         return decoded
-
 
 if __name__ == '__main__':
     import numpy as np
