@@ -26,6 +26,8 @@ def ali_algorithm(discriminator_loss, discriminator_parameters,
     generator_step_rule : :class:`blocks.algorithms.StepRule`
         Generator step rule.
     """
+    MI_loss = - MI_loss
+
     gradients = OrderedDict()
     gradients.update(
         zip(discriminator_parameters,

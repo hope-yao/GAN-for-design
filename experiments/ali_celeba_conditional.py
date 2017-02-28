@@ -27,7 +27,7 @@ from blocks.algorithms import GradientDescent
 
 BATCH_SIZE = 128
 MONITORING_BATCH_SIZE = 128
-NUM_EPOCHS = 23
+NUM_EPOCHS = 123
 IMAGE_SIZE = (64, 64)
 NUM_CHANNELS = 1
 NLAT = 8
@@ -226,7 +226,7 @@ def create_models():
 
 
 def create_main_loop(save_path):
-    model, bn_model, bn_updates, classifier_cost, classifier_error, mi_cost = create_models()
+    model, bn_model, bn_updates, classifier_cost, classifier_error, mi_cost= create_models()
     ali, = bn_model.top_bricks
     discriminator_loss, generator_loss = bn_model.outputs
 
@@ -241,10 +241,10 @@ def create_main_loop(save_path):
     main_loop_stream, train_monitor_stream, valid_monitor_stream = streams
     bn_monitored_variables = (
         [v for v in bn_model.auxiliary_variables if 'norm' not in v.name] +
-        bn_model.outputs + [mi_cost])
+        bn_model.outputs + [mi_cost.mean()])
     monitored_variables = (
         [v for v in model.auxiliary_variables if 'norm' not in v.name] +
-        model.outputs + [mi_cost])
+        model.outputs+ [mi_cost.mean()])
     extensions = [
         Timing(),
         FinishAfter(after_n_epochs=NUM_EPOCHS),
@@ -274,7 +274,7 @@ def create_main_loop(save_path):
     classifier_monitor = ([classifier_cost, classifier_error])
     extensions = [
         Timing(),
-        FinishAfter(after_n_epochs=2),
+        FinishAfter(after_n_epochs=20),
         DataStreamMonitoring(
             classifier_monitor, train_monitor_stream, prefix="train"),
         DataStreamMonitoring(
