@@ -1,7 +1,7 @@
 import argparse
 import logging
 
-from blocks.algorithms import Adam
+from blocks.algorithms import Adam, RMSProp
 from blocks.bricks import LeakyRectifier, Logistic, Rectifier, Softmax, Activation
 from blocks.bricks.conv import ConvolutionalSequence
 from blocks.extensions import FinishAfter, Timing, Printing, ProgressBar
@@ -220,31 +220,34 @@ def create_models():
     z_hat = ali.encoder.apply(x, embeddings)  # G_z(x,e(y))
     x_hat = ali.decoder.apply(z_hat, embeddings)  # G_x(z,e(y))
     y_hat = ali.classifier.apply(x_hat)
-    mi_cost = tensor.sum(y_hat * tensor.log(y_hat))
+    eps = 1e-8
+    # mi_cost = - tensor.sum( y*tensor.log(y_hat+eps) - y * tensor.log(y_hat+eps))
+    c_cost = - tensor.sum(y * tensor.log(y_hat+eps) )# + (1-y) * tensor.log((1-y_hat)+eps)
 
-    return model, bn_model, bn_updates, classifier_cost, classifier_error, mi_cost
+    return model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost
 
 
 def create_main_loop(save_path):
-    model, bn_model, bn_updates, classifier_cost, classifier_error, mi_cost= create_models()
+    model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost= create_models()
     ali, = bn_model.top_bricks
     discriminator_loss, generator_loss = bn_model.outputs
 
     step_rule = Adam(learning_rate=LEARNING_RATE, beta1=BETA1)
+    step_rule_d = RMSProp(learning_rate=LEARNING_RATE,decay_rate = 0.99)
     algorithm = ali_algorithm(discriminator_loss, ali.discriminator_parameters,
-                              step_rule, generator_loss,
+                              step_rule_d, generator_loss,
                               ali.generator_parameters, step_rule,
-                              mi_cost, step_rule)
+                              c_cost, step_rule)
     algorithm.add_updates(bn_updates)
     streams = create_crs_data_streams(BATCH_SIZE, MONITORING_BATCH_SIZE,
                                          sources=('features', 'targets'))
     main_loop_stream, train_monitor_stream, valid_monitor_stream = streams
     bn_monitored_variables = (
         [v for v in bn_model.auxiliary_variables if 'norm' not in v.name] +
-        bn_model.outputs + [mi_cost.mean()])
+        bn_model.outputs + [c_cost.mean()])
     monitored_variables = (
         [v for v in model.auxiliary_variables if 'norm' not in v.name] +
-        model.outputs+ [mi_cost.mean()])
+        model.outputs+ [c_cost.mean()])
     extensions = [
         Timing(),
         FinishAfter(after_n_epochs=NUM_EPOCHS),
@@ -274,7 +277,7 @@ def create_main_loop(save_path):
     classifier_monitor = ([classifier_cost, classifier_error])
     extensions = [
         Timing(),
-        FinishAfter(after_n_epochs=20),
+        FinishAfter(after_n_epochs=10),
         DataStreamMonitoring(
             classifier_monitor, train_monitor_stream, prefix="train"),
         DataStreamMonitoring(
