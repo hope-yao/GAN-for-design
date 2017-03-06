@@ -1,7 +1,7 @@
 import argparse
 import logging
 
-from blocks.algorithms import Adam, RMSProp
+from blocks.algorithms import Adam, RMSProp, Momentum
 from blocks.bricks import LeakyRectifier, Logistic, Rectifier, Softmax, Activation
 from blocks.bricks.conv import ConvolutionalSequence
 from blocks.extensions import FinishAfter, Timing, Printing, ProgressBar
@@ -36,7 +36,8 @@ NEMB = 8
 
 GAUSSIAN_INIT = IsotropicGaussian(std=0.01)
 ZERO_INIT = Constant(0)
-LEARNING_RATE = 1e-5
+LEARNING_RATE_D = 1e-5
+LEARNING_RATE_G = 1e-5
 BETA1 = 0.5
 LEAK = 0.02
 
@@ -232,12 +233,12 @@ def create_main_loop(save_path):
     ali, = bn_model.top_bricks
     discriminator_loss, generator_loss = bn_model.outputs
 
-    step_rule = Adam(learning_rate=LEARNING_RATE, beta1=BETA1)
-    step_rule_d = RMSProp(learning_rate=LEARNING_RATE,decay_rate = 0.99)
+    step_rule_g = Adam(learning_rate=LEARNING_RATE_G, beta1=BETA1)
+    step_rule_d = Momentum(learning_rate=LEARNING_RATE_D,momentum = 0.99)
     algorithm = ali_algorithm(discriminator_loss, ali.discriminator_parameters,
                               step_rule_d, generator_loss,
-                              ali.generator_parameters, step_rule,
-                              c_cost, step_rule)
+                              ali.generator_parameters, step_rule_g,
+                              c_cost, step_rule_g)
     algorithm.add_updates(bn_updates)
     streams = create_crs_data_streams(BATCH_SIZE, MONITORING_BATCH_SIZE,
                                          sources=('features', 'targets'))
@@ -273,11 +274,11 @@ def create_main_loop(save_path):
     classify_algorithm = GradientDescent(cost=classifier_cost,
                                         gradients=gradients,
                                         parameters=ali.classifier_parameters,
-                                        step_rule=step_rule)
+                                        step_rule=step_rule_g)
     classifier_monitor = ([classifier_cost, classifier_error])
     extensions = [
         Timing(),
-        FinishAfter(after_n_epochs=10),
+        FinishAfter(after_n_epochs=12),
         DataStreamMonitoring(
             classifier_monitor, train_monitor_stream, prefix="train"),
         DataStreamMonitoring(

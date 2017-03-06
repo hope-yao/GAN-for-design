@@ -340,7 +340,6 @@ class ConditionalALI(Initializable, Random):
     @property
     def generator_parameters(self):
         return list(
-
             Selector([self.encoder, self.decoder]).get_parameters().values())
     @property
     def embedding_parameters(self):
@@ -383,13 +382,16 @@ class ConditionalALI(Initializable, Random):
 
         data_preds, sample_preds = self.get_predictions(x, z_hat, x_tilde, z,
                                                         embeddings)
-
         # To be modularized
-        discriminator_loss = (tensor.nnet.softplus(-data_preds) +
-                              tensor.nnet.softplus(sample_preds)).mean()
-        generator_loss = (tensor.nnet.softplus(data_preds) +
-                          tensor.nnet.softplus(-sample_preds)).mean()
+        # discriminator_loss = (tensor.nnet.softplus(-data_preds) +
+        #                       tensor.nnet.softplus(sample_preds)).mean()
+        # generator_loss = (tensor.nnet.softplus(data_preds) +
+        #                   tensor.nnet.softplus(-sample_preds)).mean()
 
+        discriminator_loss = (tensor.nnet.softplus(data_preds) +
+                              tensor.nnet.softplus(-sample_preds)).mean()
+        generator_loss = (tensor.nnet.softplus(-data_preds) +
+                          tensor.nnet.softplus(sample_preds)).mean()
 
         return discriminator_loss, generator_loss
 
