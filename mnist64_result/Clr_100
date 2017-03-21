@@ -1,0 +1,1012 @@
+/home/hope-yao/anaconda2/bin/python /home/hope-yao/Documents/ALI-conditional/experiments/ali_celeba_conditional.py
+Using gpu device 0: TITAN X (Pascal) (CNMeM is enabled with initial size: 5.0% of memory, cuDNN 5105)
+/home/hope-yao/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py:353: UserWarning: DEPRECATION: the 'padding' parameter is not going to exist anymore as it is going to be replaced by the parameter 'pad'.
+  ignore_border=self.ignore_border, padding=self.padding))
+INFO:root:Input dim: 1 64 64 
+INFO:root:Layer 0 (Convolutional) dim: 16 62 62
+INFO:root:Layer 1 (Rectifier)
+INFO:root:Layer 2 (MaxPooling) dim: 16 31 31
+INFO:root:Layer 3 (Convolutional) dim: 32 29 29
+INFO:root:Layer 4 (Rectifier)
+INFO:root:Layer 5 (MaxPooling) dim: 32 14 14
+INFO:root:Layer 6 (Convolutional) dim: 64 12 12
+INFO:root:Layer 7 (Rectifier)
+INFO:root:Layer 8 (MaxPooling) dim: 64 6 6
+/home/hope-yao/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py:344: UserWarning: DEPRECATION: the 'padding' parameter is not going to exist anymore as it is going to be replaced by the parameter 'pad'.
+  ignore_border=self.ignore_border)
+WARNING:blocks.algorithms:GradientDescent: gradients already specified directly; cost is unused.
+classifier training...
+INFO:blocks.main_loop:Entered the main loop
+INFO:blocks.algorithms:Initializing the training algorithm
+INFO:blocks.algorithms:The training algorithm is initialized
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+
+-------------------------------------------------------------------------------
+BEFORE FIRST EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: True
+	 epochs_done: 0
+	 iterations_done: 0
+	 received_first_batch: False
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 0:
+	 time_initialization: 3.5215420723
+	 train_classifier cost: 284.190338135
+	 train_classifier error: 0.2001953125
+	 valid_classifier cost: 282.804046631
+	 valid_classifier error: 0.19921875
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 0, step 4 |#######################################| Elapsed Time: 0:00:01
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 1
+	 iterations_done: 4
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0114645957947
+	 time_read_data_total: 0.0114645957947
+	 time_train_this_epoch: 0.0858561992645
+	 time_train_total: 0.0858561992645
+	 train_classifier cost: 63367.9882812
+	 train_classifier error: 0.3974609375
+	 valid_classifier cost: 63126.2539062
+	 valid_classifier error: 0.388671875
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 1, step 4 |#######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 2
+	 iterations_done: 8
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 8:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00982213020325
+	 time_read_data_total: 0.0212867259979
+	 time_train_this_epoch: 0.01895403862
+	 time_train_total: 0.104810237885
+	 train_classifier cost: 10800.1708984
+	 train_classifier error: 0.409179627895
+	 valid_classifier cost: 10030.5234375
+	 valid_classifier error: 0.380859345198
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 2, step 4 |#######################################| Elapsed Time: 0:00:01
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 3
+	 iterations_done: 12
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 12:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00940704345703
+	 time_read_data_total: 0.030693769455
+	 time_train_this_epoch: 0.0191013813019
+	 time_train_total: 0.123911619186
+	 train_classifier cost: 14865.8115234
+	 train_classifier error: 0.3916015625
+	 valid_classifier cost: 16014.0820312
+	 valid_classifier error: 0.416015625
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 3, step 4 |#######################################| Elapsed Time: 0:00:01
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 4
+	 iterations_done: 16
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 16:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00883007049561
+	 time_read_data_total: 0.0395238399506
+	 time_train_this_epoch: 0.0190958976746
+	 time_train_total: 0.143007516861
+	 train_classifier cost: 6375.71826172
+	 train_classifier error: 0.391578406096
+	 valid_classifier cost: 6505.85253906
+	 valid_classifier error: 0.396464943886
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 4, step 4 |#######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 5
+	 iterations_done: 20
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 20:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00906944274902
+	 time_read_data_total: 0.0485932826996
+	 time_train_this_epoch: 0.0192358493805
+	 time_train_total: 0.162243366241
+	 train_classifier cost: 12690.1425781
+	 train_classifier error: 0.4091796875
+	 valid_classifier cost: 12744.4140625
+	 valid_classifier error: 0.400390625
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 6
+	 iterations_done: 24
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 24:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0128328800201
+	 time_read_data_total: 0.0614261627197
+	 time_train_this_epoch: 0.0184330940247
+	 time_train_total: 0.180676460266
+	 train_classifier cost: 8722.1796875
+	 train_classifier error: 0.391271591187
+	 valid_classifier cost: 9452.98632812
+	 valid_classifier error: 0.39620757103
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 5, step 4 |#######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 7
+	 iterations_done: 28
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 28:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00870513916016
+	 time_read_data_total: 0.0701313018799
+	 time_train_this_epoch: 0.0194330215454
+	 time_train_total: 0.200109481812
+	 train_classifier cost: 8400.68066406
+	 train_classifier error: 0.3916015625
+	 valid_classifier cost: 7991.70117188
+	 valid_classifier error: 0.384765625
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 6, step 4 |#######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 8
+	 iterations_done: 32
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 32:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0091609954834
+	 time_read_data_total: 0.0792922973633
+	 time_train_this_epoch: 0.0190696716309
+	 time_train_total: 0.219179153442
+	 train_classifier cost: 9153.27050781
+	 train_classifier error: 0.4091796875
+	 valid_classifier cost: 9290.09375
+	 valid_classifier error: 0.412109375
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 7, step 4 |#######################################| Elapsed Time: 0:00:02
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 8, step 4 |#######################################| Elapsed Time: 0:00:01
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 9
+	 iterations_done: 36
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 36:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00880575180054
+	 time_read_data_total: 0.0880980491638
+	 time_train_this_epoch: 0.019403219223
+	 time_train_total: 0.238582372665
+	 train_classifier cost: 11014.625
+	 train_classifier error: 0.3916015625
+	 valid_classifier cost: 11228.6933594
+	 valid_classifier error: 0.384765625
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 9, step 4 |#######################################| Elapsed Time: 0:00:01
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 10
+	 iterations_done: 40
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00874376296997
+	 time_read_data_total: 0.0968418121338
+	 time_train_this_epoch: 0.0195395946503
+	 time_train_total: 0.258121967316
+	 train_classifier cost: 7300.31054688
+	 train_classifier error: 0.35716304183
+	 valid_classifier cost: 8048.72753906
+	 valid_classifier error: 0.393867939711
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 11
+	 iterations_done: 44
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 44:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00889110565186
+	 time_read_data_total: 0.105732917786
+	 time_train_this_epoch: 0.0192539691925
+	 time_train_total: 0.277375936508
+	 train_classifier cost: 7691.93457031
+	 train_classifier error: 0.398763328791
+	 valid_classifier cost: 6936.28857422
+	 valid_classifier error: 0.372090309858
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 10, step 4 |######################################| Elapsed Time: 0:00:02
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 12
+	 iterations_done: 48
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 48:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0086498260498
+	 time_read_data_total: 0.114382743835
+	 time_train_this_epoch: 0.0193068981171
+	 time_train_total: 0.296682834625
+	 train_classifier cost: 11377.3945312
+	 train_classifier error: 0.3974609375
+	 valid_classifier cost: 12061.4824219
+	 valid_classifier error: 0.419921875
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 11, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 13
+	 iterations_done: 52
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 52:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00872611999512
+	 time_read_data_total: 0.123108863831
+	 time_train_this_epoch: 0.019464969635
+	 time_train_total: 0.31614780426
+	 train_classifier cost: 8357.83203125
+	 train_classifier error: 0.3857421875
+	 valid_classifier cost: 8215.47265625
+	 valid_classifier error: 0.392578125
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 12, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 13, step 4 |######################################| Elapsed Time: 0:00:02
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 14
+	 iterations_done: 56
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 56:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00918650627136
+	 time_read_data_total: 0.132295370102
+	 time_train_this_epoch: 0.0191037654877
+	 time_train_total: 0.335251569748
+	 train_classifier cost: 7919.73632812
+	 train_classifier error: 0.415020227432
+	 valid_classifier cost: 7654.40136719
+	 valid_classifier error: 0.404278337955
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 15
+	 iterations_done: 60
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 60:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00871014595032
+	 time_read_data_total: 0.141005516052
+	 time_train_this_epoch: 0.01948595047
+	 time_train_total: 0.354737520218
+	 train_classifier cost: 13137.0068359
+	 train_classifier error: 0.3857421875
+	 valid_classifier cost: 13548.2636719
+	 valid_classifier error: 0.392578125
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 14, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 16
+	 iterations_done: 64
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 64:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00895404815674
+	 time_read_data_total: 0.149959564209
+	 time_train_this_epoch: 0.0201590061188
+	 time_train_total: 0.374896526337
+	 train_classifier cost: 4948.88769531
+	 train_classifier error: 0.391590833664
+	 valid_classifier cost: 5285.8046875
+	 valid_classifier error: 0.416004866362
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 15, step 4 |######################################| Elapsed Time: 0:00:02
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 17
+	 iterations_done: 68
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 68:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0090217590332
+	 time_read_data_total: 0.158981323242
+INFO:blocks.extensions.saveload:Checkpointing has finished
+	 time_train_this_epoch: 0.0191969871521
+Epoch 16, step 4 |######################################| Elapsed Time: 0:00:01
+	 time_train_total: 0.394093513489
+	 train_classifier cost: 12077.109375
+	 train_classifier error: 0.4091796875
+	 valid_classifier cost: 11457.0117188
+	 valid_classifier error: 0.380859375
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 17, step 4 |######################################| Elapsed Time: 0:00:01
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 18
+	 iterations_done: 72
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 72:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00925779342651
+	 time_read_data_total: 0.168239116669
+	 time_train_this_epoch: 0.018944978714
+	 time_train_total: 0.413038492203
+	 train_classifier cost: 7844.25878906
+	 train_classifier error: 0.391570806503
+	 valid_classifier cost: 8776.60839844
+	 valid_classifier error: 0.415987044573
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 18, step 4 |######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 19
+	 iterations_done: 76
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 76:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00945019721985
+	 time_read_data_total: 0.177689313889
+	 time_train_this_epoch: 0.0188920497894
+	 time_train_total: 0.431930541992
+	 train_classifier cost: 10171.6738281
+	 train_classifier error: 0.3974609375
+	 valid_classifier cost: 9560.49023438
+	 valid_classifier error: 0.388671875
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 20
+	 iterations_done: 80
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 80:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00937128067017
+	 time_read_data_total: 0.187060594559
+	 time_train_this_epoch: 0.0190868377686
+	 time_train_total: 0.451017379761
+	 train_classifier cost: 7923.78076172
+	 train_classifier error: 0.4033203125
+	 valid_classifier cost: 7932.64697266
+	 valid_classifier error: 0.408203125
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 19, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+
+Epoch 20, step 4 |######################################| Elapsed Time: 0:00:01
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+	 batch_interrupt_received: False
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+	 epoch_interrupt_received: False
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+	 epoch_started: False
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+	 epochs_done: 21
+INFO:blocks.extensions.saveload:Checkpointing has started
+	 iterations_done: 84
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 84:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00850510597229
+	 time_read_data_total: 0.195565700531
+	 time_train_this_epoch: 0.0195162296295
+	 time_train_total: 0.47053360939
+	 train_classifier cost: 10847.53125
+	 train_classifier error: 0.3974609375
+	 valid_classifier cost: 10826.203125
+	 valid_classifier error: 0.388671875
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 21, step 4 |######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 22
+	 iterations_done: 88
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 88:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00814175605774
+	 time_read_data_total: 0.203707456589
+	 time_train_this_epoch: 0.0195398330688
+	 time_train_total: 0.490073442459
+	 train_classifier cost: 8420.51074219
+	 train_classifier error: 0.3857421875
+	 valid_classifier cost: 9019.58496094
+	 valid_classifier error: 0.423828125
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 23
+	 iterations_done: 92
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 92:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00981783866882
+	 time_read_data_total: 0.213525295258
+	 time_train_this_epoch: 0.0184197425842
+	 time_train_total: 0.508493185043
+	 train_classifier cost: 7452.58837891
+	 train_classifier error: 0.413654237986
+	 valid_classifier cost: 6504.32910156
+	 valid_classifier error: 0.371681839228
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 22, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 24
+	 iterations_done: 96
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 96:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.0136737823486
+	 time_read_data_total: 0.227199077606
+	 time_train_this_epoch: 0.0197050571442
+	 time_train_total: 0.528198242188
+	 train_classifier cost: 12664.2373047
+	 train_classifier error: 0.3857421875
+	 valid_classifier cost: 13851.59375
+	 valid_classifier error: 0.423828125
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 23, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 24, step 4 |######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 25
+	 iterations_done: 100
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 100:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00978398323059
+	 time_read_data_total: 0.236983060837
+	 time_train_this_epoch: 0.018896818161
+	 time_train_total: 0.547095060349
+	 train_classifier cost: 4895.68896484
+	 train_classifier error: 0.389264702797
+	 valid_classifier cost: 4560.67089844
+	 valid_classifier error: 0.380595386028
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 26
+	 iterations_done: 104
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 104:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00887417793274
+	 time_read_data_total: 0.24585723877
+	 time_train_this_epoch: 0.0193088054657
+	 time_train_total: 0.566403865814
+	 train_classifier cost: 10993.3955078
+	 train_classifier error: 0.4091796875
+	 valid_classifier cost: 10781.3798828
+	 valid_classifier error: 0.400390625
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 25, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 26, step 4 |######################################| Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 27
+	 iterations_done: 108
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 108:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00977826118469
+	 time_read_data_total: 0.255635499954
+	 time_train_this_epoch: 0.0184257030487
+	 time_train_total: 0.584829568863
+	 train_classifier cost: 9537.10253906
+	 train_classifier error: 0.385733783245
+	 valid_classifier cost: 9953.83984375
+	 valid_classifier error: 0.39256966114
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 28
+	 iterations_done: 112
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 112:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00908780097961
+	 time_read_data_total: 0.264723300934
+	 time_train_this_epoch: 0.0189800262451
+	 time_train_total: 0.603809595108
+	 train_classifier cost: 6641.33398438
+	 train_classifier error: 0.3974609375
+	 valid_classifier cost: 6960.49755859
+	 valid_classifier error: 0.419921875
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 27, step 4 |######################################| Elapsed Time: 0:00:01
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 28, step 4 |######################################| Elapsed Time: 0:00:01
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 29
+	 iterations_done: 116
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 116:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.00930309295654
+	 time_read_data_total: 0.27402639389
+	 time_train_this_epoch: 0.0186750888824
+	 time_train_total: 0.62248468399
+	 train_classifier cost: 11384.7001953
+	 train_classifier error: 0.4033203125
+	 valid_classifier cost: 10861.9160156
+	 valid_classifier error: 0.376953125
+
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data started
+INFO:blocks.extensions.monitoring:Monitoring on auxiliary data finished
+INFO:blocks.extensions.saveload:Checkpointing has started
+INFO:blocks.extensions.saveload:Checkpointing has finished
+Epoch 29, step 4 |######################################| Elapsed Time: 0:00:02
+INFO:blocks.extensions.saveload:Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 120:
+	 saved_to: ('ali_conditional_celeba.tar',)
+	 time_read_data_this_epoch: 0.010488986969
+	 time_read_data_total: 0.284515380859
+	 time_train_this_epoch: 0.0181469917297
+	 time_train_total: 0.64063167572
+	 train_classifier cost: 7059.62597656
+	 train_classifier error: 0.389877647161
+	 training_finish_requested: True
+	 valid_classifier cost: 7938.4765625
+	 valid_classifier error: 0.412897050381
+
+INFO:blocks.extensions.saveload:Checkpointing has finished
+WARNING:blocks.main_loop:different parameters for model and algorithm
+INFO:blocks.main_loop:Entered the main loop
+INFO:blocks.algorithms:Initializing the training algorithm
+
+-------------------------------------------------------------------------------
+TRAINING HAS BEEN FINISHED:
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 120:
+	 saved_to: ('ali_conditional_celeba.tar', 'ali_conditional_celeba.tar')
+	 time_read_data_this_epoch: 0.010488986969
+	 time_read_data_total: 0.284515380859
+	 time_train_this_epoch: 0.0181469917297
+	 time_train_total: 0.64063167572
+	 train_classifier cost: 7059.62597656
+	 train_classifier error: 0.389877647161
+	 training_finish_requested: True
+	 training_finished: True
+	 valid_classifier cost: 7938.4765625
+	 valid_classifier error: 0.412897050381
+
+classifier training done...
+WARNING:blocks.main_loop:Received epoch interrupt signal.
+
+Blocks will complete this epoch of training and run extensions before exiting. If you do not want to complete this epoch, press CTRL + C again to stop training after the current batch.
+

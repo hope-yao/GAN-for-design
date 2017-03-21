@@ -31,14 +31,24 @@ def ali_algorithm(discriminator_loss, discriminator_parameters,
     gradients = OrderedDict()
     gradients.update(
         zip(discriminator_parameters,
-            theano.grad(discriminator_loss + c_loss, discriminator_parameters)))
+            theano.grad(discriminator_loss, discriminator_parameters)))
+    gradients.update(
+        zip(discriminator_parameters,
+            theano.grad(discriminator_loss, discriminator_parameters)))
+    gradients.update(
+        zip(discriminator_parameters,
+            theano.grad(discriminator_loss, discriminator_parameters)))
     gradients.update(
         zip(generator_parameters,
-            theano.grad(generator_loss + c_loss, generator_parameters)))
+            theano.grad(generator_loss + 100*c_loss, generator_parameters)))
     # gradients.update(
     #     zip(generator_parameters,
     #         theano.grad(MI_loss, generator_parameters)))
     step_rule = CompositeRule([
+                               Restrict(discriminator_step_rule,
+                                        discriminator_parameters),
+                               Restrict(discriminator_step_rule,
+                                        discriminator_parameters),
                                Restrict(discriminator_step_rule,
                                         discriminator_parameters),
                                Restrict(generator_step_rule,

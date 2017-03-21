@@ -1,0 +1,1 @@
+before 15, reconstruction used entropy term while cross entropy should be used. thus previous reconstruction are all bad

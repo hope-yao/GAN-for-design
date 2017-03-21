@@ -1,5 +1,5 @@
 """Functions for creating data streams."""
-from fuel.datasets import CIFAR10, SVHN, CelebA, Rectcrs
+from fuel.datasets import CIFAR10, SVHN, CelebA, Rectcrs, Rect_rectcrs, Mnist64
 from fuel.datasets.toy import Spiral
 from fuel.schemes import ShuffledScheme, SequentialScheme
 from fuel.streams import DataStream
@@ -66,7 +66,9 @@ def create_celeba_data_streams(batch_size, monitoring_batch_size,
 def create_crs_data_streams(batch_size, monitoring_batch_size,
                                sources=('features',), rng=None):
 
-    train_set = Rectcrs(
+    # train_set = Rectcrs(
+    #     ('train',), sources=sources)
+    train_set = Rect_rectcrs(
         ('train',), sources=sources)
     main_loop_stream = DataStream.default_stream(
         train_set,
@@ -76,7 +78,36 @@ def create_crs_data_streams(batch_size, monitoring_batch_size,
         train_set,
         iteration_scheme=ShuffledScheme(
             train_set.num_examples, monitoring_batch_size, rng=rng))
-    valid_set = Rectcrs(
+    # valid_set = Rectcrs(
+    #     ('valid',), sources=sources)
+    valid_set = Rect_rectcrs(
+        ('valid',), sources=sources)
+    valid_monitor_stream = DataStream.default_stream(
+        valid_set,
+        iteration_scheme=ShuffledScheme(
+            valid_set.num_examples, monitoring_batch_size, rng=rng))
+
+    return main_loop_stream, train_monitor_stream, valid_monitor_stream
+
+
+def create_mnist64_data_streams(batch_size, monitoring_batch_size,
+                               sources=('features',), rng=None):
+
+    # train_set = Rectcrs(
+    #     ('train',), sources=sources)
+    train_set = Mnist64(
+        ('train',), sources=sources)
+    main_loop_stream = DataStream.default_stream(
+        train_set,
+        iteration_scheme=ShuffledScheme(
+            train_set.num_examples, batch_size, rng=rng))
+    train_monitor_stream = DataStream.default_stream(
+        train_set,
+        iteration_scheme=ShuffledScheme(
+            train_set.num_examples, monitoring_batch_size, rng=rng))
+    # valid_set = Rectcrs(
+    #     ('valid',), sources=sources)
+    valid_set = Mnist64(
         ('valid',), sources=sources)
     valid_monitor_stream = DataStream.default_stream(
         valid_set,
