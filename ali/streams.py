@@ -1,5 +1,5 @@
 """Functions for creating data streams."""
-from fuel.datasets import CIFAR10, SVHN, CelebA, Rectcrs, Rect_rectcrs, Mnist64
+from fuel.datasets import CIFAR10, SVHN, CelebA, Rectcrs, Rect_rectcrs
 from fuel.datasets.toy import Spiral
 from fuel.schemes import ShuffledScheme, SequentialScheme
 from fuel.streams import DataStream

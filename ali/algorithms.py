@@ -32,33 +32,34 @@ def ali_algorithm(discriminator_loss, discriminator_parameters,
     gradients.update(
         zip(discriminator_parameters,
             theano.grad(discriminator_loss, discriminator_parameters)))
-    gradients.update(
-        zip(discriminator_parameters,
-            theano.grad(discriminator_loss, discriminator_parameters)))
-    gradients.update(
-        zip(discriminator_parameters,
-            theano.grad(discriminator_loss, discriminator_parameters)))
+    # gradients.update(
+    #     zip(discriminator_parameters,
+    #         theano.grad(discriminator_loss, discriminator_parameters)))
+    # gradients.update(
+    #     zip(discriminator_parameters,
+    #         theano.grad(discriminator_loss, discriminator_parameters)))
     gradients.update(
         zip(generator_parameters,
-            theano.grad(generator_loss + 100*c_loss, generator_parameters)))
+            theano.grad(generator_loss , generator_parameters)))
     # gradients.update(
     #     zip(generator_parameters,
     #         theano.grad(MI_loss, generator_parameters)))
     step_rule = CompositeRule([
                                Restrict(discriminator_step_rule,
                                         discriminator_parameters),
-                               Restrict(discriminator_step_rule,
-                                        discriminator_parameters),
-                               Restrict(discriminator_step_rule,
-                                        discriminator_parameters),
-                               Restrict(generator_step_rule,
-                                        generator_parameters),
-                               # Restrict(mi_step_rule,
-                               #          generator_parameters)
+                               # Restrict(discriminator_step_rule,
+                               #          discriminator_parameters),
+                               # Restrict(discriminator_step_rule,
+                               #          discriminator_parameters),
+                               # Restrict(generator_step_rule,
+                               #          generator_parameters),
+                               Restrict(mi_step_rule,
+                                        generator_parameters)
                                ])
 
     return GradientDescent(
         # cost=generator_loss + discriminator_loss + MI_loss,
         gradients=gradients,
         parameters=discriminator_parameters + generator_parameters,
+        # parameters=discriminator_parameters,
         step_rule=step_rule)

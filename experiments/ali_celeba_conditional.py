@@ -24,7 +24,7 @@ from ali.conditional_bricks import (EncoderMapping, Decoder,
 from ali.streams import create_celeba_data_streams, create_crs_data_streams, create_mnist64_data_streams
 from ali.utils import get_log_odds, conv_brick, conv_transpose_brick, bn_brick
 from blocks.algorithms import GradientDescent
-RATIO = 2
+RATIO = 16
 NCLASSES = 2
 
 BATCH_SIZE = 128
@@ -38,8 +38,8 @@ NEMB = 256/RATIO
 GAUSSIAN_INIT = IsotropicGaussian(std=0.01)
 ZERO_INIT = Constant(0)
 LEARNING_RATE_C = 1e-3
-LEARNING_RATE_D = 1e-3
-LEARNING_RATE_G = 2e-4
+LEARNING_RATE_D = 1e-1
+LEARNING_RATE_G = 1e-2
 BETA1 = 0.5
 LEAK = 0.02
 
@@ -238,7 +238,8 @@ def create_main_loop(save_path):
     discriminator_loss, generator_loss = bn_model.outputs
 
     step_rule_c = RMSProp(learning_rate=LEARNING_RATE_C)
-    step_rule_g = Adam(learning_rate=LEARNING_RATE_G, beta1=BETA1)
+    # step_rule_g = Adam(learning_rate=LEARNING_RATE_G, beta1=BETA1)
+    step_rule_g = Momentum(learning_rate=LEARNING_RATE_G,momentum = 0.99)
     step_rule_d = Momentum(learning_rate=LEARNING_RATE_D,momentum = 0.99)
     algorithm = ali_algorithm(discriminator_loss, ali.discriminator_parameters,
                               step_rule_d, generator_loss,
@@ -255,7 +256,7 @@ def create_main_loop(save_path):
         [v for v in model.auxiliary_variables if 'norm' not in v.name] +
         model.outputs+ [c_cost, c_er])
     from blocks.monitoring import aggregation
-    bn_monitored_variables += [aggregation.mean(algorithm.total_gradient_norm)]
+    bn_monitored_variables += [algorithm.total_gradient_norm]
     extensions = [
         Timing(),
         FinishAfter(after_n_epochs=NUM_EPOCHS),
@@ -285,7 +286,7 @@ def create_main_loop(save_path):
     classifier_monitor = ([classifier_cost, classifier_error])
     extensions = [
         Timing(),
-        FinishAfter(after_n_epochs=20),
+        FinishAfter(after_n_epochs=5),
         DataStreamMonitoring(
             classifier_monitor, train_monitor_stream, prefix="train"),
         DataStreamMonitoring(
