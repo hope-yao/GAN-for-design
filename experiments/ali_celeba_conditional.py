@@ -18,7 +18,7 @@ from blocks.roles import INPUT
 from theano import tensor, grad
 
 from ali.algorithms import ali_algorithm
-from ali.conditional_bricks import (EncoderMapping, Decoder,
+from ali.conditional_bricks import (EncoderMapping, Decoder, NewDecoder,
                                     GaussianConditional, XZYJointDiscriminator,
                                     ConditionalALI, LeNet)
 from ali.streams import create_celeba_data_streams, create_crs_data_streams, create_mnist64_data_streams
@@ -33,13 +33,14 @@ NUM_EPOCHS = 123
 IMAGE_SIZE = (64, 64)
 NUM_CHANNELS = 1
 NLAT = 256/RATIO
-NEMB = 256/RATIO
+# NEMB = 256/RATIO
+NEMB = 2 #Identical mapping
 
 GAUSSIAN_INIT = IsotropicGaussian(std=0.01)
 ZERO_INIT = Constant(0)
 LEARNING_RATE_C = 1e-3
-LEARNING_RATE_D = 1e-1
-LEARNING_RATE_G = 1e-2
+LEARNING_RATE_D = 1e-3
+LEARNING_RATE_G = 6e-3
 BETA1 = 0.5
 LEAK = 0.02
 
@@ -71,7 +72,7 @@ def create_model_brick():
         conv_transpose_brick(2, 1, 64/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
         conv_brick(1, 1, NUM_CHANNELS), Logistic()]
 
-    decoder = Decoder(
+    decoder = NewDecoder(
         layers=dec_layers, num_channels=NLAT + NEMB, image_size=(1, 1), use_bias=False,
         name='decoder_mapping')
     # Discriminator for x
@@ -204,7 +205,7 @@ def create_models():
     from blocks.bricks.cost import CategoricalCrossEntropy, MisclassificationRate
 
     pred = ali.classifier.apply(x)
-    classifier_cost = - ( tensor.sum(y*tensor.log(pred)) + tensor.sum((1-y)*tensor.log(1-pred)) )
+    classifier_cost = - ( tensor.mean(y*tensor.log(pred)) + tensor.mean((1-y)*tensor.log(1-pred)) )
     classifier_error = tensor.sum(tensor.sqr(y - pred))/BATCH_SIZE/NCLASSES
 
     # pred = tensor.reshape(ali.classifier.apply(x),(BATCH_SIZE,NUM_CHANNELS))
@@ -225,36 +226,55 @@ def create_models():
     y_hat = ali.classifier.apply(x_hat)
 
     eps = 1e-10
-    c_cost = - ( tensor.sum(y*tensor.log(y_hat+eps)) + tensor.sum((1-y)*tensor.log(1-y_hat+eps)) )
+    c_cost = - ( tensor.mean(y*tensor.log(y_hat+eps)) + tensor.mean((1-y)*tensor.log(1-y_hat+eps)) )
     c_er = tensor.sum(tensor.sqr(y - y_hat))/BATCH_SIZE/2.
     c_cost.name = 'c_cost'
     c_er.name = 'c_er'
-    return model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost, c_er
+
+    y_b = tensor.stack( [tensor.ones((BATCH_SIZE,)), tensor.zeros((BATCH_SIZE,))], axis=1 )# (1,0)
+    embeddings = ali.embedder.apply(y_b)
+    z_b_hat = ali.theano_rng.normal(size=(BATCH_SIZE, NLAT, 1, 1))
+    x_b = ali.decoder.apply(z_b_hat ,embeddings)
+    y_b_hat = ali.classifier.apply(x_b)
+    y_b_hat = y_b_hat.reshape((BATCH_SIZE,2))
+    y_b_0 = tensor.stack( [tensor.zeros((BATCH_SIZE,)), tensor.zeros((BATCH_SIZE,))], axis=1 )# (0,0)
+    y_b_1 = tensor.stack( [tensor.zeros((BATCH_SIZE,)), tensor.ones((BATCH_SIZE,))], axis=1 )# (0,1)
+    y_b_2 = tensor.stack( [tensor.ones((BATCH_SIZE,)), tensor.ones((BATCH_SIZE,))], axis=1 )# (1,1)
+    # basis_cost  = - ( tensor.sum(y_b_0*tensor.log(y_b_hat+eps)) + tensor.sum((1-y_b_0)*tensor.log(1-y_b_hat+eps)) )
+    # basis_cost += - ( tensor.sum(y_b_1*tensor.log(y_b_hat+eps)) + tensor.sum((1-y_b_1)*tensor.log(1-y_b_hat+eps)) )
+    # basis_cost += - ( tensor.sum(y_b_2*tensor.log(y_b_hat+eps)) + tensor.sum((1-y_b_2)*tensor.log(1-y_b_hat+eps)) )
+    # basis_cost = tensor.sum ( 1./(10.- tensor.sum(tensor.sqr(y_b_hat-y_b_0),1)) + 1./(10.- tensor.sum(tensor.sqr(y_b_hat-y_b_1),1)) + 1./(10.- tensor.sum(tensor.sqr(y_b_hat-y_b_2),1)) )
+    # basis_cost = -(tensor.mean( tensor.sum(tensor.sqr(y_b_hat-y_b_0),1) + tensor.sum(tensor.sqr(y_b_hat-y_b_1),1) + 100*tensor.sum(tensor.sqr(y_b_hat-y_b_2),1) ))
+    basis_cost = tensor.mean( -tensor.log(tensor.sum(tensor.sqr(y_b_hat-y_b_0),1)+eps)
+                              -tensor.log(tensor.sum(tensor.sqr(y_b_hat-y_b_1),1)+eps)
+                              -tensor.log(tensor.sum(tensor.sqr(y_b_hat-y_b_2),1)+eps) )
+    basis_cost.name = 'basis_cost'  # Basis cost is negative of cross entropy, but to be maximized
+    return model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost, c_er, basis_cost
 
 
 def create_main_loop(save_path):
-    model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost, c_er= create_models()
+    model, bn_model, bn_updates, classifier_cost, classifier_error, c_cost, c_er, basis_cost= create_models()
     ali, = bn_model.top_bricks
     discriminator_loss, generator_loss = bn_model.outputs
 
     step_rule_c = RMSProp(learning_rate=LEARNING_RATE_C)
-    # step_rule_g = Adam(learning_rate=LEARNING_RATE_G, beta1=BETA1)
-    step_rule_g = Momentum(learning_rate=LEARNING_RATE_G,momentum = 0.99)
+    step_rule_g = Adam(learning_rate=LEARNING_RATE_G, beta1=BETA1)
     step_rule_d = Momentum(learning_rate=LEARNING_RATE_D,momentum = 0.99)
+    step_rule_mi = Momentum(learning_rate=LEARNING_RATE_G,momentum = 0.99)
     algorithm = ali_algorithm(discriminator_loss, ali.discriminator_parameters,
                               step_rule_d, generator_loss,
                               ali.generator_parameters, step_rule_g,
-                              c_cost, step_rule_g)
+                              c_cost, step_rule_mi, basis_cost,ali.decoder_parameters)
     algorithm.add_updates(bn_updates)
     streams = create_crs_data_streams(BATCH_SIZE, MONITORING_BATCH_SIZE,
                                          sources=('features', 'targets'))
     main_loop_stream, train_monitor_stream, valid_monitor_stream = streams
     bn_monitored_variables = (
         [v for v in bn_model.auxiliary_variables if 'norm' not in v.name] +
-        bn_model.outputs + [c_cost, c_er])
+        bn_model.outputs + [basis_cost, c_cost, c_er])
     monitored_variables = (
         [v for v in model.auxiliary_variables if 'norm' not in v.name] +
-        model.outputs+ [c_cost, c_er])
+        model.outputs+ [basis_cost, c_cost, c_er])
     from blocks.monitoring import aggregation
     bn_monitored_variables += [algorithm.total_gradient_norm]
     extensions = [
@@ -284,9 +304,10 @@ def create_main_loop(save_path):
                                         parameters=ali.classifier_parameters,
                                         step_rule=step_rule_c)
     classifier_monitor = ([classifier_cost, classifier_error])
+    from blocks_extras.extensions.plot import Plot
     extensions = [
         Timing(),
-        FinishAfter(after_n_epochs=5),
+        FinishAfter(after_n_epochs=15),
         DataStreamMonitoring(
             classifier_monitor, train_monitor_stream, prefix="train"),
         DataStreamMonitoring(
@@ -295,6 +316,11 @@ def create_main_loop(save_path):
                    use_cpickle=True),
         ProgressBar(),
         Printing(),
+        Plot('ALI-MI', channels=[
+            ['train_ali_compute_losses_discriminator_loss'],
+            ['train_ali_compute_losses_generator_loss'],
+            ['train_total_gradient_norm']
+        ])
     ]
     classify_loop = MainLoop(data_stream=main_loop_stream,
                              model=Model(classifier_cost),

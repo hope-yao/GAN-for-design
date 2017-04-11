@@ -142,7 +142,8 @@ class Embedder(Initializable):
 
     @application(inputs=['y'], outputs=['outputs'])
     def apply(self, y):
-        embedding = self.linear.apply(y)
+        # embedding = self.linear.apply(y)
+        embedding = y
         if self.output_type == 'fc':
             return embedding
         if self.output_type == 'conv':
@@ -220,6 +221,44 @@ class Decoder(Initializable):
     def apply(self, z, y, application_call):
         # Concatenating conditional data with inputs
         z_y = tensor.concatenate([z, y], axis=1)
+        return self.mapping.apply(z_y)
+
+
+class NewDecoder(Initializable):
+    def __init__(self, layers, num_channels, image_size, use_bias=False, **kwargs):
+        self.layers = layers
+        self.num_channels = num_channels
+        self.image_size = image_size
+
+        self.mapping0 = ConvolutionalSequence(layers=layers[:-5],
+                                             num_channels=num_channels,
+                                             image_size=image_size,
+                                             use_bias=use_bias,
+                                             name='decoder_mapping0')
+        self.mapping1 = ConvolutionalSequence(layers=layers[:-5],
+                                             num_channels=num_channels,
+                                             image_size=image_size,
+                                             use_bias=use_bias,
+                                             name='decoder_mapping1')
+        self.mapping = ConvolutionalSequence(layers=layers[-5:],
+                                             num_channels=128/16,
+                                             image_size=(32,32),
+                                             use_bias=use_bias,
+                                             name='decoder_mapping')
+        children = [self.mapping,self.mapping0,self.mapping1]
+        kwargs.setdefault('children', []).extend(children)
+        super(NewDecoder, self).__init__(**kwargs)
+
+    @application(inputs=['z', 'y'], outputs=['outputs'])
+    def apply(self, z, y, application_call):
+        # network with branches and concatenation
+        y0 = y[:,0:0,:,:]
+        y1 = y[:,1:1,:,:]
+        z_y0 = tensor.concatenate([z, y0], axis=1)
+        z_y1 = tensor.concatenate([z, y1], axis=1)
+        z_y = ( self.mapping0.apply(z_y0) + self.mapping1.apply(z_y1) )
+        # z_y = tensor.concatenate([z, y], axis=1)
+        # z_y = ( self.mapping0.apply(z_y) + self.mapping1.apply(z_y) )
         return self.mapping.apply(z_y)
 
 
@@ -341,6 +380,10 @@ class ConditionalALI(Initializable, Random):
     def generator_parameters(self):
         return list(
             Selector([self.encoder, self.decoder]).get_parameters().values())
+    @property
+    def decoder_parameters(self):
+        return list(
+            Selector([self.decoder]).get_parameters().values())
     @property
     def embedding_parameters(self):
         return list(
