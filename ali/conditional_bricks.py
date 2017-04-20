@@ -225,41 +225,37 @@ class Decoder(Initializable):
 
 
 class NewDecoder(Initializable):
-    def __init__(self, layers, num_channels, image_size, use_bias=False, **kwargs):
-        self.layers = layers
+    def __init__(self, dec_layers_sub0, dec_layers_sub1, dec_layers_sum, num_channels, image_size, use_bias=False, **kwargs):
+        # self.layers = layers
         self.num_channels = num_channels
         self.image_size = image_size
 
-        self.mapping0 = ConvolutionalSequence(layers=layers[:-5],
-                                             num_channels=num_channels,
+        self.mapping0 = ConvolutionalSequence(layers=dec_layers_sub0,
+                                             num_channels=num_channels-1,
                                              image_size=image_size,
                                              use_bias=use_bias,
                                              name='decoder_mapping0')
-        self.mapping1 = ConvolutionalSequence(layers=layers[:-5],
-                                             num_channels=num_channels,
+        self.mapping1 = ConvolutionalSequence(layers=dec_layers_sub1,
+                                             num_channels=num_channels-1,
                                              image_size=image_size,
                                              use_bias=use_bias,
                                              name='decoder_mapping1')
-        self.mapping = ConvolutionalSequence(layers=layers[-5:],
-                                             num_channels=128/16,
-                                             image_size=(32,32),
+        self.mapping = ConvolutionalSequence(layers=dec_layers_sum,
+                                             num_channels=8,
+                                             image_size=(63,63),
                                              use_bias=use_bias,
                                              name='decoder_mapping')
-        children = [self.mapping,self.mapping0,self.mapping1]
+        children = [self.mapping0,self.mapping,self.mapping1]
         kwargs.setdefault('children', []).extend(children)
         super(NewDecoder, self).__init__(**kwargs)
 
     @application(inputs=['z', 'y'], outputs=['outputs'])
     def apply(self, z, y, application_call):
-        # network with branches and concatenation
-        y0 = y[:,0:0,:,:]
-        y1 = y[:,1:1,:,:]
+        y0, y1 = y
         z_y0 = tensor.concatenate([z, y0], axis=1)
         z_y1 = tensor.concatenate([z, y1], axis=1)
-        z_y = ( self.mapping0.apply(z_y0) + self.mapping1.apply(z_y1) )
-        # z_y = tensor.concatenate([z, y], axis=1)
-        # z_y = ( self.mapping0.apply(z_y) + self.mapping1.apply(z_y) )
-        return self.mapping.apply(z_y)
+        return  self.mapping.apply(self.mapping0.apply(z_y0)+ self.mapping1.apply(z_y1))
+
 
 
 class GaussianConditional(Initializable, Random):
@@ -421,7 +417,9 @@ class ConditionalALI(Initializable, Random):
     def compute_losses(self, x, z, y, application_call):
         embeddings = self.embedder.apply(y)
         z_hat = self.encoder.apply(x, embeddings)  # G_z(x,e(y))
-        x_tilde = self.decoder.apply(z, embeddings) # G_x(z,e(y))
+        # x_tilde = self.decoder.apply(z, embeddings) # G_x(z,e(y))
+        y0, y1 = embeddings[:,0:1,:,:], embeddings[:,1:,:,:]
+        x_tilde = self.decoder.apply(z, [y0, y1]) # G_x(z,e(y))
 
         data_preds, sample_preds = self.get_predictions(x, z_hat, x_tilde, z,
                                                         embeddings)
@@ -440,13 +438,16 @@ class ConditionalALI(Initializable, Random):
 
     @application(inputs=['z', 'y'], outputs=['samples'])
     def sample(self, z, y):
-        return self.decoder.apply(z, self.embedder.apply(y))
+        embeddings = self.embedder.apply(y)
+        y0, y1 = embeddings[:,0:1,:,:], embeddings[:,1:,:,:]
+        return self.decoder.apply(z, [y0, y1])
 
     @application(inputs=['x', 'y'], outputs=['reconstructions'])
     def reconstruct(self, x, y):
         embeddings = self.embedder.apply(y)
+        y0, y1 = embeddings[:,0:1,:,:], embeddings[:,1:,:,:]
         encoded = self.encoder.apply(x, embeddings)
-        decoded = self.decoder.apply(encoded, embeddings)
+        decoded = self.decoder.apply(encoded, [y0,y1])
         return decoded
 
     @application(inputs=['y'], outputs=['embeddings'])
@@ -463,12 +464,14 @@ class ConditionalALI(Initializable, Random):
     @application(inputs=['z', 'y'], outputs=['decoded'])
     def decode(self, z, y):
         embeddings = self.embedder.apply(y)
-        decoded = self.decoder.apply(z, embeddings)
+        y0, y1 = embeddings[:,0:1,:,:], embeddings[:,1:,:,:]
+        decoded = self.decoder.apply(z, [y0,y1])
         return decoded
 
     @application(inputs=['z', 'e'], outputs=['decoded'])
     def decode_embedded(self, z, e):
-        decoded = self.decoder.apply(z, e)
+        y0, y1 = e[:,0:1,:,:], e[:,1:,:,:]
+        decoded = self.decoder.apply(z, [y0,y1])
         return decoded
 
 if __name__ == '__main__':

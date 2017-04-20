@@ -38,7 +38,7 @@ def ali_algorithm(discriminator_loss, discriminator_parameters,
             theano.grad(generator_loss , generator_parameters)))
     gradients.update(
         zip(generator_parameters,
-            theano.grad(100*c_loss+basis_cost, generator_parameters)))
+            theano.grad(c_loss+basis_cost, generator_parameters)))
     step_rule = CompositeRule([
                                Restrict(discriminator_step_rule,
                                         discriminator_parameters),

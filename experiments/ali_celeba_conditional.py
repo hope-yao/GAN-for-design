@@ -21,7 +21,7 @@ from ali.algorithms import ali_algorithm
 from ali.conditional_bricks import (EncoderMapping, Decoder, NewDecoder,
                                     GaussianConditional, XZYJointDiscriminator,
                                     ConditionalALI, LeNet)
-from ali.streams import create_celeba_data_streams, create_crs_data_streams, create_mnist64_data_streams
+from ali.streams import create_celeba_data_streams, create_crs_data_streams, create_mnist64_data_streams, create_crs_data_streams_new
 from ali.utils import get_log_odds, conv_brick, conv_transpose_brick, bn_brick
 from blocks.algorithms import GradientDescent
 RATIO = 16
@@ -64,16 +64,29 @@ def create_model_brick():
 
     encoder = GaussianConditional(encoder_mapping, name='encoder')
     # Decoder
-    dec_layers = [
-        conv_transpose_brick(4, 1, 512/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
-        conv_transpose_brick(7, 2, 256/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
-        conv_transpose_brick(5, 2, 256/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
-        conv_transpose_brick(7, 2, 128/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
-        conv_transpose_brick(2, 1, 64/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    # dec_layers = [
+    #     conv_transpose_brick(4, 1, 512/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    #     conv_transpose_brick(7, 2, 256/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    #     conv_transpose_brick(5, 2, 256/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    #     conv_transpose_brick(7, 2, 128/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    #     conv_transpose_brick(2, 1, 64/RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+    #     conv_brick(1, 1, NUM_CHANNELS), Logistic()]
+    dec_layers_sub0 = [
+        conv_transpose_brick(4, 1, 512 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(7, 2, 256 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(5, 2, 256 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(7, 2, 128 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK)]
+    dec_layers_sub1 = [
+        conv_transpose_brick(4, 1, 512 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(7, 2, 256 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(5, 2, 256 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
+        conv_transpose_brick(7, 2, 128 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK)]
+    dec_layers_sum = [
+        conv_transpose_brick(2, 1, 64 / RATIO), bn_brick(), LeakyRectifier(leak=LEAK),
         conv_brick(1, 1, NUM_CHANNELS), Logistic()]
 
     decoder = NewDecoder(
-        layers=dec_layers, num_channels=NLAT + NEMB, image_size=(1, 1), use_bias=False,
+        dec_layers_sub0, dec_layers_sub1, dec_layers_sum, num_channels=NLAT + NEMB, image_size=(1, 1), use_bias=False,
         name='decoder_mapping')
     # Discriminator for x
     layers = [
@@ -111,17 +124,17 @@ def create_model_brick():
         x_discriminator, z_discriminator, joint_discriminator,
         name='discriminator')
 
-    feature_maps = [16, 32, 64]
-    mlp_hiddens = [200]
+    feature_maps = [8, 8]
+    mlp_hiddens = [8]
     output_size = NCLASSES
     image_size = (64, 64)
 
     conv_activations = [Rectifier() for _ in feature_maps]
     mlp_activations = [Rectifier() for _ in mlp_hiddens] + [Logistic()]
     convnet = LeNet(conv_activations, 1, image_size,
-                    filter_sizes=[(3, 3), (3, 3), (3, 3)],
+                    filter_sizes=[(3, 3), (3, 3)],
                     feature_maps=feature_maps,
-                    pooling_sizes=[(2, 2), (2, 2), (2, 2)],
+                    pooling_sizes=[(2, 2), (2, 2)],
                     top_mlp_activations=mlp_activations,
                     top_mlp_dims=mlp_hiddens + [output_size],
                     border_mode='valid',
@@ -162,15 +175,15 @@ def create_model_brick():
     ali.push_allocation_config()
     encoder_mapping.layers[-1].use_bias = True
     encoder_mapping.layers[-1].tied_biases = False
-    decoder.layers[-2].use_bias = True
-    decoder.layers[-2].tied_biases = False
+    # decoder.layers[-2].use_bias = True
+    # decoder.layers[-2].tied_biases = False
     x_discriminator.layers[0].use_bias = True
     x_discriminator.layers[0].tied_biases = True
     ali.initialize()
     raw_marginals, = next(
         create_crs_data_streams(500, 500)[0].get_epoch_iterator())
     b_value = get_log_odds(raw_marginals)
-    decoder.layers[-2].b.set_value(b_value)
+    # decoder.layers[-2].b.set_value(b_value)
 
     return ali
 
@@ -222,7 +235,8 @@ def create_models():
 
     embeddings = ali.embedder.apply(y)
     z_hat = ali.encoder.apply(x, embeddings)  # G_z(x,e(y))
-    x_hat = ali.decoder.apply(z_hat, embeddings)  # G_x(z,e(y))
+    y0, y1 = embeddings[:, 0:1, :, :], embeddings[:, 1:, :, :]
+    x_hat = ali.decoder.apply(z_hat,  [y0,y1])  # G_x(z,e(y))
     y_hat = ali.classifier.apply(x_hat)
 
     eps = 1e-10
@@ -234,7 +248,8 @@ def create_models():
     y_b = tensor.stack( [tensor.ones((BATCH_SIZE,)), tensor.zeros((BATCH_SIZE,))], axis=1 )# (1,0)
     embeddings = ali.embedder.apply(y_b)
     z_b_hat = ali.theano_rng.normal(size=(BATCH_SIZE, NLAT, 1, 1))
-    x_b = ali.decoder.apply(z_b_hat ,embeddings)
+    y0, y1 = embeddings[:, 0:1, :, :], embeddings[:, 1:, :, :]
+    x_b = ali.decoder.apply(z_b_hat ,[y0,y1])
     y_b_hat = ali.classifier.apply(x_b)
     y_b_hat = y_b_hat.reshape((BATCH_SIZE,2))
     y_b_0 = tensor.stack( [tensor.zeros((BATCH_SIZE,)), tensor.zeros((BATCH_SIZE,))], axis=1 )# (0,0)
@@ -305,13 +320,16 @@ def create_main_loop(save_path):
                                         step_rule=step_rule_c)
     classifier_monitor = ([classifier_cost, classifier_error])
     from blocks_extras.extensions.plot import Plot
+    streams_new = create_crs_data_streams_new(BATCH_SIZE, MONITORING_BATCH_SIZE,
+                                         sources=('features', 'targets'))
+    main_loop_stream_new, train_monitor_stream_new, valid_monitor_stream_new = streams_new
     extensions = [
         Timing(),
         FinishAfter(after_n_epochs=15),
         DataStreamMonitoring(
-            classifier_monitor, train_monitor_stream, prefix="train"),
+            classifier_monitor, train_monitor_stream_new, prefix="train"),
         DataStreamMonitoring(
-            classifier_monitor, valid_monitor_stream, prefix="valid"),
+            classifier_monitor, valid_monitor_stream_new, prefix="valid"),
         Checkpoint('./testC.ckpt', after_epoch=True, after_training=True,
                    use_cpickle=True),
         ProgressBar(),
@@ -322,7 +340,7 @@ def create_main_loop(save_path):
             ['train_total_gradient_norm']
         ])
     ]
-    classify_loop = MainLoop(data_stream=main_loop_stream,
+    classify_loop = MainLoop(data_stream=main_loop_stream_new,
                              model=Model(classifier_cost),
                              algorithm=classify_algorithm,
                              extensions=extensions)
